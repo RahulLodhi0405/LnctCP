@@ -4,8 +4,8 @@ import Navbar from './components/Navbar';
 import Particles from './components/Particles';
 import 'font-awesome/css/font-awesome.min.css';
 import Home from './components/Home';
-import Contact from './components/Contact';
-import Gallery from './components/Gallery';
+//import Contact from './components/Contact';
+//import Gallery from './components/Gallery';
 
 
 function App() {
@@ -18,9 +18,7 @@ function App() {
       <Navbar />
       <Particles id="tsparticles" />
       <Home/>
-      <Contact/>
-      <Gallery/>
-      
+            
     </div>
     
   );

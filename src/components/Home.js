@@ -61,12 +61,12 @@ const Home = () => {
         <div className="event-cards">
           <div className="event-card">
             <h3>Hackathon 2024</h3><br></br>
-            <p>Join us for our annual hackathon! Code, collaborate, and compete for exciting prizes.</p> <br></br>
+            <p>Join us for our annual hackathon! Code, collaborate, and compete for exciting prizes.</p> <br></br> <br></br>
             <a href="#register" className="cta-button">Register Now</a>
           </div>
           <div className="event-card">
-            <h3>Weekly Coding Challenge</h3> <br></br>
-            <p>Test your coding skills and improve by competing in our weekly challenges.</p> <br></br>
+            <h3>Coding Challenge</h3> <br></br>
+            <p>Test your coding skills and improve by competing in our weekly challenges.</p> <br></br> <br></br>
             <a href="#register" className="cta-button">Participate</a>
           </div>
         </div>
