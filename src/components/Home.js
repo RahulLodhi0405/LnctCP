@@ -23,7 +23,7 @@ const Home = () => {
           <img src={Logo} alt="CP Club Logo" className="cp-logo" />
           <div className="club-info">
             <h1 className="club-name">Competitive Programming Club</h1>
-            <p className="club-tagline">Empowering future coders, one problem at a time.</p>
+            <p className="club-tagline">Arena where programming athletes rise, code, and excel.</p>
           </div>
         </motion.div>
 
@@ -51,6 +51,27 @@ const Home = () => {
     </div>
   </div>
 </section>
+<section className="card-grid-section">
+  <h2>Featured Projects</h2>
+  <div className="card-grid">
+    <div className="card">
+      <h3>Project 1</h3>
+      <p>Explore our latest coding challenges and improve your skills.</p>
+    </div>
+    <div className="card">
+      <h3>Project 2</h3>
+      <p>Get involved in competitive programming events and contests.</p>
+    </div>
+    <div className="card">
+      <h3>Project 3</h3>
+      <p>Join our hackathons and collaborate on innovative solutions.</p>
+    </div>
+    <div className="card">
+      <h3>Project 4</h3>
+      <p>Learn and grow by solving complex algorithm challenges.</p>
+    </div>
+  </div>
+</section>
 
 
       {/* Upcoming Events Section */}
@@ -70,6 +91,11 @@ const Home = () => {
             <a href="#register" className="cta-button">Participate</a>
           </div>
         </div>
+
+       
+
+
+
       </section>
       <br></br>
       <br></br>
@@ -147,39 +173,56 @@ const Home = () => {
     </section>
   
 
+{/* Footer Section */}
+<footer>
+  <div className="footer-content">
+    
+    {/* Social Links Section */}
+    <div className="footer-social">
+      <h3>Follow Us</h3>
+      <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">
+        <FaLinkedin className="social-icon" />
+      </a>
+      <a href="https://discord.com" target="_blank" rel="noopener noreferrer">
+        <FaDiscord className="social-icon" />
+      </a>
+      <a href="https://github.com" target="_blank" rel="noopener noreferrer">
+        <FaGithub className="social-icon" />
+      </a>
+      <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
+        <FaTwitter className="social-icon" />
+      </a>
+    </div>
 
-      {/* Footer Section */}
-      <footer>
-        <div className="footer-content">
-          <div className="footer-social">
-            <h3>Follow Us</h3>
-            <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">
-              <FaLinkedin className="social-icon" />
-            </a>
-            <a href="https://discord.com" target="_blank" rel="noopener noreferrer">
-              <FaDiscord className="social-icon" />
-            </a>
-            <a href="https://github.com" target="_blank" rel="noopener noreferrer">
-              <FaGithub className="social-icon" />
-            </a>
-            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
-              <FaTwitter className="social-icon" />
-            </a>
-          </div>
+    {/* Contact Information */}
+    <div className="footer-contact">
+      <h3>Contact Us</h3>
+      <p>Email: <a href="mailto:cpclub@example.com">LnctCP@club.com</a></p>
+      <p>Phone: +123 456 7890</p>
+      <p>Location: 462022 Lnct College , Raisen Road , Bhopal</p>
+    </div>
 
-          <div className="footer-map">
-            {/* Add a map embed */}
-            <iframe
-              title="club-location"
-              src="https://www.google.com/maps/embed?pb=..."
-              style={{ border: 0, width: "100%", height: "200px" }}
-              allowFullScreen=""
-              loading="lazy"
-            ></iframe>
-          </div>
-        </div>
-        <p>&copy; 2024 Competitive Programming Club | All Rights Reserved</p>
-      </footer>
+    {/* Map Embed */}
+    <div className="footer-map">
+      <iframe
+        title="club-location"
+        src="https://www.google.com/maps/embed?pb=..."
+        style={{ border: 0, width: "100%", height: "200px" }}
+        allowFullScreen=""
+        loading="lazy"
+      ></iframe>
+    </div>
+
+
+  </div>
+  <div className="footer-bottom">
+    <p>&copy; 2024 Competitive Programming Club | All Rights Reserved</p>
+    <div className="footer-terms">
+      <a href="/privacy-policy">Privacy Policy</a> | <a href="/terms-of-service">Terms of Service</a>
+    </div>
+  </div>
+</footer>
+
     </div>
   );
 };
