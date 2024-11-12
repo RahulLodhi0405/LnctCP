@@ -124,7 +124,7 @@ const Home = () => {
         transition={{ duration: 1.5 }}
       >
         <h2 className="contact-heading">Get in Touch</h2>
-        <form className="contact-form" action="https://formspree.io/f/yourform" method="POST">
+        <form className="contact-form" action="https://formspree.io/f/xbljykqe" method="POST">
           <div className="form-group">
             <input type="text" id="name" name="name" required placeholder="Your Name" className="form-input" />
           </div>
