@@ -1,0 +1,80 @@
+/* Gallery Section */
+.gallery-section {
+    padding: 50px;
+    background-color: #0d0d0d;
+    text-align: center;
+  }
+  
+  .gallery-section h2 {
+    font-size: 2.5rem;
+    color: #00d4ff;
+    margin-bottom: 40px;
+    text-shadow: 0 0 20px #00d4ff;
+  }
+  
+  /* Gallery Container */
+  .gallery-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    overflow: hidden;
+    white-space: nowrap;
+    padding: 10px;
+  }
+  
+  /* Individual Gallery Card */
+  .gallery-card {
+    display: inline-block;
+    width: 300px;
+    height: 200px;
+    margin: 0 20px;
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 212, 255, 0.5);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+  }
+  
+  /* Image inside the Gallery Card */
+  .gallery-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.5s ease;
+    border-radius: 15px;
+  }
+  
+  /* Hover Effect on Card */
+  .gallery-card:hover .gallery-image {
+    transform: scale(1.1);
+  }
+  
+  /* Neon Effect */
+  .gallery-card {
+    filter: drop-shadow(0 0 15px #00d4ff);
+  }
+  
+  .gallery-card:hover {
+    filter: drop-shadow(0 0 30px #00d4ff);
+  }
+
+  /* Add these to the existing gallery CSS */
+@keyframes slide {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  
+  .gallery-container {
+    display: flex;
+    animation: slide 20s linear infinite;
+  }
+  
+  .gallery-card {
+    flex-shrink: 0; /* Prevent cards from shrinking */
+  }
+  
+  

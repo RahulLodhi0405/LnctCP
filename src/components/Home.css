@@ -1,0 +1,611 @@
+/* General Body & Background */
+body {
+    
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    overflow-x: hidden;
+  }
+  
+  /* Center the logo */
+.logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Full viewport height */
+}
+
+.cp-logo {
+  max-width: 500px;
+  height: 50vh;
+}
+br
+  /* Hero Section */
+  .hero {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+    text-align: center;
+    position: relative;
+  }
+  
+  .hero-content h1 {
+    font-size: 3rem;
+    color: #00d4ff;
+    text-shadow: 0 0 15px #00d4ff, 0 0 20px #00d4ff;
+  }
+  
+  .hero-content p {
+    font-size: 1.5rem;
+    margin: 20px 0;
+    color: #ccc;
+  }
+  
+  .cta-button {
+    padding: 15px 30px;
+    background-color: #00d4ff;
+    color: black;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+    box-shadow: 0px 0px 10px rgba(0, 212, 255, 0.6);
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .cta-button:hover {
+    background-color: #02a9e0;
+    transform: scale(1.1);
+    box-shadow: 0px 0px 20px rgba(0, 212, 255, 0.8);
+  }
+  /* About Section */
+.about-us {
+
+  padding: 80px 20px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.about-us h2 {
+  font-size: 3rem;
+  color: #00d4ff;
+  text-shadow: 0 0 20px #00d4ff, 0 0 40px #02a9e0;
+  margin-bottom: 30px;
+  animation: glowAnimation 2s infinite alternate;
+}
+
+@keyframes glowAnimation {
+  from {
+    text-shadow: 0 0 20px #00d4ff, 0 0 40px #02a9e0;
+  }
+  to {
+    text-shadow: 0 0 30px #00d4ff, 0 0 60px #02a9e0;
+  }
+}
+
+.about-us p {
+  font-size: 1.5rem;
+  color: #fff;
+  max-width: 900px;
+  margin: 0 auto;
+  line-height: 1.8;
+  text-shadow: 0 0 10px rgba(0, 212, 255, 0.3);
+  transition: all 0.3s ease-in-out;
+}
+
+/* Adding futuristic glowing particles */
+.about-us::before,
+.about-us::after {
+  content: '';
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  background: rgba(0, 212, 255, 0.6);
+  border-radius: 50%;
+  filter: blur(150px);
+  z-index: 1;
+  animation: float 6s ease-in-out infinite;
+}
+
+.about-us::before {
+  top: -50px;
+  left: -50px;
+}
+
+.about-us::after {
+  bottom: -50px;
+  right: -50px;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(20px);
+  }
+}
+
+/* Cool hover effects on the about image */
+.about-content img {
+  width: 400px;
+  height: 250px;
+  border-radius: 15%;
+  box-shadow: 0 0 20px rgba(0, 212, 255, 0.8);
+  transition: transform 0.6s ease, box-shadow 0.4s ease;
+  z-index: 2;
+}
+
+.about-content img:hover {
+  transform: scale(1.1) rotate(1deg);
+  box-shadow: 0 0 40px rgba(0, 212, 255, 1);
+}
+
+/* Text content hover effects */
+.about-text:hover p {
+  transform: scale(1.02);
+  text-shadow: 0 0 20px rgba(0, 212, 255, 0.5);
+}
+
+  
+  /* Events Section */
+  .events {
+   
+    padding: 50px 20px;
+    text-align: center;
+  }
+
+  .events h2 {
+    font-size: 2.5rem;
+    color: #00d4ff;
+    text-shadow: 0 0 15px #00d4ff, 0 0 30px #02a9e0;
+    animation: neonGlow 2s infinite alternate;
+  }
+  
+  .event-cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .event-card {
+    background-color: #292929;
+    width: 300px;
+    padding: 20px;
+    margin: 15px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 10px rgba(0, 212, 255, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .event-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 0px 25px rgba(0, 212, 255, 0.8);
+  }
+  
+  .event-card h3 {
+    color: #00d4ff;
+    font-size: 1.5rem;
+  }
+  
+  .event-card p {
+    color: #bbb;
+  }
+  
+  .event-card .cta-button {
+    background-color: #00d4ff;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    margin-top: 10px;
+    color: #000;
+  }
+  
+  .event-card .cta-button:hover {
+    background-color: #02a9e0;
+  }
+  
+  /* Resources Section */
+  .resources {
+    
+    padding: 50px 20px;
+    text-align: center;
+  }
+  
+  .resources ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .resources li {
+    margin: 10px 0;
+  }
+  
+  .resources a {
+    color: #00d4ff;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+  }
+  
+  .resources a:hover {
+    color: #02a9e0;
+  }
+  
+  /* Footer */
+  footer {
+   
+    padding: 30px 0;
+    text-align: center;
+    color: #888;
+  }
+  
+  footer p {
+    font-size: 1rem;
+  }
+ 
+  
+  /* Leaderboard Section */
+  .leaderboard {
+   
+    padding: 50px 20px;
+    text-align: center;
+  }
+  
+  .leaderboard-cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .leaderboard-card {
+    background-color: #333;
+    width: 300px;
+    padding: 20px;
+    margin: 15px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 10px rgba(0, 212, 255, 0.6);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .leaderboard-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 0px 25px rgba(0, 212, 255, 0.8);
+  }
+  
+  .leaderboard-card h3 {
+    color: #00d4ff;
+  }
+  
+  .leaderboard-card p {
+    color: #bbb;
+  }
+
+  /* Center the logo and text */
+.logo-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+ 
+  position: relative;
+  overflow: hidden;
+}
+
+.cp-logo {
+  max-width: 200px;
+  height: auto;
+  margin-bottom: 20px;
+ 
+  animation: float 4s ease-in-out infinite, glow 3s ease-in-out infinite;
+}
+
+.club-info {
+  text-align: center;
+   /* Neon color for futuristic look */
+  font-family: 'Orbitron', sans-serif; /* Use a futuristic font */
+}
+
+.club-name {
+  font-size: 2.5rem;
+  margin: 0;
+  animation: fadeIn 2s ease-in-out;
+}
+
+.club-tagline {
+  font-size: 1.2rem;
+  margin-top: 10px;
+  animation: fadeIn 3s ease-in-out;
+  opacity: 0.8;
+}
+
+/* Simple fade-in animation for the text */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* Our Team Section */
+.our-team {
+  font-size: 1.5rem;
+  color: #00d4ff;
+  text-shadow: 0 0 15px #00d4ff, 0 0 30px #02a9e0;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+/* Neon glow animation for section title */
+.our-team h2 {
+  font-size: 2.5rem;
+  color: #00d4ff;
+  text-shadow: 0 0 15px #00d4ff, 0 0 30px #02a9e0;
+  animation: neonGlow 2s infinite alternate;
+}
+
+@keyframes neonGlow {
+  from {
+    text-shadow: 0 0 10px #00d4ff, 0 0 20px #02a9e0;
+  }
+  to {
+    text-shadow: 0 0 25px #00d4ff, 0 0 50px #02a9e0;
+  }
+}
+
+/* Coordinator image centered */
+.coordinator {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+/* President and Vice President side by side */
+.pres-vp {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  margin-bottom: 50px;
+}
+
+/* Team grid for other members */
+.team-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 50px;
+}
+
+/* Team member card with hover effect */
+.team-member {
+  width: 180px;
+  height: 220px;
+  position: relative;
+  perspective: 1000px;
+  transition: transform 0.6s ease-in-out;
+  border-radius: 15px;
+  background: rgba(20, 20, 20, 0.9);
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 212, 255, 0.5);
+  transform-style: preserve-3d;
+}
+
+.team-member:hover {
+  transform: rotateY(15deg) scale(1.05);
+  box-shadow: 0 0 40px rgba(0, 212, 255, 0.8);
+}
+
+/* Team member image */
+.team-member img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 15px;
+  transition: transform 0.4s ease;
+}
+
+.team-member img:hover {
+  transform: scale(1.2);
+}
+
+/* Team member name styling */
+.team-member h3 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 212, 255, 0.9);
+  color: #000;
+  font-size: 1.2rem;
+  padding: 10px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: background 0.3s ease;
+}
+
+.team-member h3:hover {
+  background: rgba(0, 212, 255, 1);
+  letter-spacing: 1px;
+}
+
+.coordinator img {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+  box-shadow: 0 0 20px rgba(0, 212, 255, 0.8); /* Neon glow */
+  transition: transform 0.6s ease, box-shadow 0.4s ease;
+  z-index: 2;
+}
+
+.coordinator img:hover {
+  transform: scale(1.1) rotate(3deg); /* 3D hover effect */
+  box-shadow: 0 0 40px rgba(0, 212, 255, 1); /* Intense glow */
+}
+
+
+/* Footer Section */
+footer {
+  
+  color: #ccc;
+  padding: 30px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  position: relative;
+  box-shadow: 0 0 30px rgba(0, 212, 255, 0.5);
+  text-align: center;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0 50px;
+}
+
+/* Social icons with glowing hover effects */
+.footer-social a {
+  margin: 0 10px;
+  font-size: 1.8rem;
+  color: #00d4ff;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+  position: relative;
+}
+
+.footer-social a:hover {
+  color: #02a9e0;
+  text-shadow: 0 0 10px #00d4ff, 0 0 20px #02a9e0;
+}
+
+/* Glowing hover for footer links */
+.footer-map {
+  width: 40%;
+  
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 212, 255, 0.4);
+  transition: transform 0.3s ease;
+}
+
+.footer-map:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 0 30px rgba(0, 212, 255, 0.7);
+}
+
+.footer-social a::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 200%;
+  height: 200%;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(0, 212, 255, 0.1), transparent);
+  transform: translate(-50%, -50%) scale(0);
+  transition: transform 0.4s ease;
+  z-index: -1;
+}
+
+.footer-social a:hover::before {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+
+  
+
+.club-name {
+  font-size: 2.5rem;
+  color: #00d4ff;
+  animation: textGlitch 5s infinite;
+}
+
+@keyframes textGlitch {
+  0% {
+    text-shadow: none;
+  }
+  50% {
+    text-shadow: 2px 0px #02a9e0, -2px 0px #00d4ff;
+  }
+  100% {
+    text-shadow: none;
+  }
+}
+
+
+.background-layer {
+  position: fixed;
+  width: 200%;
+  height: 200%;
+  z-index: -1;
+  animation: moveBackground 60s linear infinite;
+}
+
+@keyframes moveBackground {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}.cp-logo {
+  max-width: 200px;
+  height: auto;
+  animation: rotate 10s infinite linear, float 4s ease-in-out infinite, colorChange 8s infinite alternate; /* Adding color change animation */
+  filter: drop-shadow(0 0 20px #00d4ff); /* Neon blue glow */
+  transition: transform 0.6s ease, filter 0.4s ease; /* Smooth hover transition */
+}
+
+.cp-logo:hover {
+  transform: scale(1.1) rotate(15deg); /* 3D rotation effect on hover */
+  filter: drop-shadow(0 0 40px #00d4ff); /* Stronger neon glow on hover */
+}
+
+/* Rotate animation */
+@keyframes rotate {
+  0% {
+    transform: rotateY(0deg);
+  }
+  100% {
+    transform: rotateY(360deg);
+  }
+}
+
+/* Floating animation */
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* Color-changing animation */
+@keyframes colorChange {
+  0% {
+    filter: drop-shadow(0 0 20px #00d4ff); /* Neon blue glow */
+  }
+  25% {
+    filter: drop-shadow(0 0 20px #ff007f); /* Pink glow */
+  }
+  50% {
+    filter: drop-shadow(0 0 20px #ff9900); /* Orange glow */
+  }
+  75% {
+    filter: drop-shadow(0 0 20px #00ff00); /* Green glow */
+  }
+  100% {
+    filter: drop-shadow(0 0 20px #00d4ff); /* Back to neon blue */
+  }
+}
