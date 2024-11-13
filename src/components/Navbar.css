@@ -196,13 +196,13 @@
   .navbar-links-mobile {
     display:table-column;
     background: linear-gradient(45deg, #ff00cc, #3333ff);
+    z-index:-1;
     position: fixed;
-    top: 0;
-    right: 0;
-    width: 100%;
-    height: 100%;
-    padding: 60px 20px;
-    text-align: center;
+    top: 70px;
+    right:400px;
+    opacity: 0.6;
+    padding: 70px 90px;
+    text-align: left;
     gap: 20px;
     transform: translateX(100%);
     transition: transform 0.3s ease-in-out;
@@ -213,13 +213,14 @@
   }
   
   .navbar-links-mobile a {
-    font-size: 24px;
+    font-size: 20px;
     color: #fff;
     text-decoration: none;
-    padding: 10px 15px;
+    padding: 5px 20px;
     display: block;
     transition: 0.3s ease;
     text-transform: uppercase;
+    opacity: 1;
   }
   
   .navbar-links-mobile a:hover {
@@ -246,5 +247,68 @@
     }
   }
   
-
+  .navbar-links-mobile button {
+    background-color:rgb(96, 43, 10);
+    border: 2px solid #00ffcc; /* Futuristic neon border */
+    color: #00ffcc;
+    font-size: 1rem;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+    transition: all 0.4s ease;
+    overflow: hidden;
+    padding: 8px 22px;
+    margin-left: 20px;
+  }
+  
+  .navbar-links-mobile li button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(120deg, rgba(0, 255, 204, 0.3), rgba(0, 255, 204, 0.1));
+    transition: 0.5s ease;
+    z-index: -1;
+  }
+  
+  .navbar-links-mobile li button:hover::before {
+    left: 100%;
+  }
+  
+  .navbar-links-mobile li button:hover {
+    color: #fff;
+    border-color: #fff;
+  }
+  
+  .navbar-links-mobile li button:focus {
+    outline: none;
+  }
+  
+  .navbar-links-mobile li button:active {
+    transform: scale(0.95);
+  }
+  
+  /* Additional futuristic glow effect */
+  .navbar-links-mobile li button::after {
+    content: "";
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    background: rgba(0, 255, 204, 0.2);
+    border-radius: 5px;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+  }
+  
+  .navbar-links-mobile li button:hover::after {
+    opacity: 1;
+  }
+  
   
