@@ -22,8 +22,9 @@ const Navbar = () => {
         <li><a href="#members">Blogs</a></li>
         <li><a href="#gallery">Gallery</a></li>
         <li><a href="#contact">Contact</a></li>
+        <li><a href="#members">Discussion</a></li>
         <li><a href="#members">Login</a></li>
-        <li><a href="#members">Signup</a></li>
+      
       </ul>
       <button className="mobile-menu-icon" onClick={() => setIsMobile(!isMobile)}>
         {isMobile ? <i className="fas fa-times"></i> : <i className="fas fa-bars"></i>}
