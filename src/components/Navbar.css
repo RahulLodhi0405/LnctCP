@@ -23,7 +23,7 @@
     background: linear-gradient(45deg, #ff00cc, #3333ff);
     position: sticky;
     top: 0;
-    z-index: 1000;
+    z-index: 1;
     width: 100%;
     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
     border-bottom: 2px solid rgba(255, 255, 255, 0.2);
@@ -195,13 +195,13 @@
   /* Mobile Menu */
   .navbar-links-mobile {
     display:table-column;
-    background: linear-gradient(45deg, #ff00cc, #3333ff);
+    background: linear-gradient(45deg, #151502 , #26045c);
     z-index:-1;
     position: fixed;
     top: 70px;
     right:400px;
     opacity: 0.6;
-    padding: 70px 90px;
+    padding: 10px 20px;
     text-align: left;
     gap: 20px;
     transform: translateX(100%);
@@ -213,7 +213,7 @@
   }
   
   .navbar-links-mobile a {
-    font-size: 20px;
+    font-size: 18px;
     color: #fff;
     text-decoration: none;
     padding: 5px 20px;
