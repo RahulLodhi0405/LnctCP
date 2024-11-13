@@ -110,36 +110,36 @@ const Home = () => {
           
           <img src={Adarshsir} alt="Coordinator" />
           <h3>Coordinator</h3>
-          <p>Adarsh Raushan </p>
+          <p>Prof. Adarsh Raushan </p>
           <div className="social-media">
             <FaLinkedin className="social-icon" />
             <FaTwitter className="social-icon" />
           </div>
         </div>
-
         <div className="team-grid">
-          <div className="team-member">
-            <img src={Priyanshu} alt="President" />
-            <h3>President</h3>
-            <p>Priyanshu Lohani</p>
-            <div className="social-media">
-              <FaLinkedin className="social-icon" />
-              <FaTwitter className="social-icon" />
-            </div>
-          </div>
-          <div className="team-member">
-            <img src={ Rahul} alt="Vice President" />
-            <p>Rahul Lodhi</p>
-            <h3>V-President</h3>
-            
-            <div className="social-media">
-              <FaGithub className="social-icon" />
-              <FaDiscord className="social-icon" />
-            </div>
-          </div>
+  <div className="team-member">
+    <img src={Priyanshu} alt="President" />
+    <h3>Priyanshu Lohani</h3> {/* Name */}
+    <p>President</p> {/* Role */}
+   
+    <div className="social-media">
+      <FaLinkedin className="social-icon" />
+      <FaTwitter className="social-icon" />
+    </div>
+  </div>
 
-        
-        </div>
+  <div className="team-member">
+    <img src={Rahul} alt="Vice President" />
+    <h3>Rahul Lodhi</h3> {/* Name */}
+    <p>Vice President</p> {/* Role */}
+  
+    <div className="social-media">
+      <FaGithub className="social-icon" />
+      <FaDiscord className="social-icon" />
+    </div>
+  </div>
+</div>
+
       </section>
 
       <section className="contact-section">
