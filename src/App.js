@@ -1,26 +1,28 @@
-
+import React from 'react';
 import './App.css';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Particles from './components/Particles';
-import 'font-awesome/css/font-awesome.min.css';
 import Home from './components/Home';
-//import Contact from './components/Contact';
-//import Gallery from './components/Gallery';
-
+import Login from './components/login/login';
+import 'font-awesome/css/font-awesome.min.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
+    <Router>
+      <div className="App">
+        <header className="App-header"></header>
         
-        
-      </header>
-      <Navbar />
-      <Particles id="tsparticles" />
-      <Home/>
-            
-    </div>
-    
+        <Navbar />
+        <Particles id="tsparticles" />
+
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/login" element={<Login />} />
+          {/* Add other routes as needed */}
+        </Routes>
+      </div>
+    </Router>
   );
 }
 

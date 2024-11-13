@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import './Navbar.css';
+import { Link } from 'react-router-dom';
+import Login from './login/login'
 
 import collegeLogo from '../Assets/CollegeLogo.png'; // Path to your college logo
 import 'font-awesome/css/font-awesome.min.css';
@@ -22,7 +24,7 @@ const Navbar = () => {
         <li><a href="#members">Blogs</a></li>
         <li><a href="#gallery">Gallery</a></li>
         <li><a href="#contact">Contact</a></li>
-        <li><a href="#members">Login</a></li>
+        <Link to="/login" style={styles.navLink}>Login</Link>
         <li><a href="#members">Signup</a></li>
       </ul>
       <button className="mobile-menu-icon" onClick={() => setIsMobile(!isMobile)}>
@@ -30,6 +32,26 @@ const Navbar = () => {
       </button>
     </nav>
   );
+};
+const styles = {
+  navbar: {
+    backgroundColor: '#333',
+    padding: '10px',
+  },
+  navList: {
+    display: 'flex',
+    listStyleType: 'none',
+    margin: 0,
+    padding: 0,
+  },
+  navItem: {
+    marginRight: '15px',
+  },
+  navLink: {
+    color: '#fff',
+    textDecoration: 'none',
+    fontSize: '16px',
+  },
 };
 
 export default Navbar;
