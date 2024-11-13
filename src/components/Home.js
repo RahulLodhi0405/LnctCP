@@ -22,7 +22,9 @@ const Home = () => {
         >
           <img src={Logo} alt="CP Club Logo" className="cp-logo" />
           <div className="club-info">
-            <h1 className="club-name">Competitive Programming Club</h1>
+          
+          <h1 className="club-name">CodersArena</h1>
+          <p className="club-subtitle">Competitive Programming Club of LNCT</p>
             <p className="club-tagline">Arena where programming athletes rise, code, and excel.</p>
           </div>
         </motion.div>

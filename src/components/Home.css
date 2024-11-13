@@ -20,6 +20,15 @@ body {
   max-width: 500px;
   height: 50vh;
 }
+
+.club-subtitle {
+  font-size: 1.1rem;
+  color: #66ffcc;
+  letter-spacing: 0.1em;
+  margin-top: 10px;
+  text-shadow: 0 0 10px rgba(102, 255, 204, 0.8), 0 0 20px rgba(102, 255, 204, 0.6);
+  animation: glow 2s infinite alternate;
+}
 br
   /* Hero Section */
   .hero {
