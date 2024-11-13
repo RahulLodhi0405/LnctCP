@@ -106,6 +106,69 @@
     transition: all 0.4s;
     border-radius: 5px;
     z-index: -1;
+    margin-top: auto;
+  }
+  
+  .navbar-links li button {
+    background-color: transparent;
+    border: 2px solid #00ffcc; /* Futuristic neon border */
+    color: #00ffcc;
+    font-size: 1rem;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+    transition: all 0.4s ease;
+    overflow: hidden;
+  }
+  
+  .navbar-links li button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(120deg, rgba(0, 255, 204, 0.3), rgba(0, 255, 204, 0.1));
+    transition: 0.5s ease;
+    z-index: -1;
+  }
+  
+  .navbar-links li button:hover::before {
+    left: 100%;
+  }
+  
+  .navbar-links li button:hover {
+    color: #fff;
+    border-color: #fff;
+  }
+  
+  .navbar-links li button:focus {
+    outline: none;
+  }
+  
+  .navbar-links li button:active {
+    transform: scale(0.95);
+  }
+  
+  /* Additional futuristic glow effect */
+  .navbar-links li button::after {
+    content: "";
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    background: rgba(0, 255, 204, 0.2);
+    border-radius: 5px;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+  }
+  
+  .navbar-links li button:hover::after {
+    opacity: 1;
   }
   
   .navbar-links a:hover::before {
@@ -131,7 +194,7 @@
   
   /* Mobile Menu */
   .navbar-links-mobile {
-    display:flex;
+    display:block;
     background: linear-gradient(45deg, #ff00cc, #3333ff);
     position: fixed;
     top: 0;

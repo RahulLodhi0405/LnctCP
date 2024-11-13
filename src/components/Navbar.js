@@ -23,7 +23,7 @@ const Navbar = () => {
         <li><a href="#gallery">Gallery</a></li>
         <li><a href="#contact">Contact</a></li>
         <li><a href="#members">Discussion</a></li>
-        <li><a href="#members">Login</a></li>
+        <li><button href="#members">Login</button></li>
       
       </ul>
       <button className="mobile-menu-icon" onClick={() => setIsMobile(!isMobile)}>
