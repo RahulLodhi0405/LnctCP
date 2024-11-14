@@ -1,0 +1,115 @@
+.resources-container {
+    padding: 50px;
+    
+    color: white;
+    font-family: '', sans-serif;
+    text-align: center;
+  }
+  
+  .resources-heading {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: #00d4ff; /* New color for the heading */
+    text-shadow: 0 0 10px #00d4ff; /* Glowing effect */
+    animation: pulse 2s infinite ease-in-out;
+  }
+  
+  .search-bar input {
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 10px;
+    border: none;
+    width: 80%;
+    max-width: 400px;
+    margin-bottom: 30px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    box-shadow: 0 0 5px #00d4ff;
+    outline: none;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  .search-bar input:focus {
+    background-color: rgba(0, 212, 255, 0.2); /* Light blue when focused */
+  }
+  
+  .resources-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 30px;
+    justify-items: center;
+  }
+  
+  .resource-card {
+    background: rgba(0, 212, 255, 0.1); /* Light blue background */
+    padding: 20px;
+    border-radius: 12px;
+    width: 250px;
+    box-shadow: 0 0 20px rgba(0, 212, 255, 0.5); /* Glowing effect */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .resource-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 30px rgba(0, 212, 255, 0.7); /* Stronger glow on hover */
+  }
+  
+  .resource-icon {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 15px;
+    filter: brightness(0) saturate(100%) invert(50%) sepia(50%) saturate(300%) hue-rotate(180deg);
+  }
+  
+  .resource-card h3 {
+    font-size: 1.5rem;
+    color: #00d4ff; /* Matching light blue color */
+    margin: 10px 0;
+  }
+  
+  .resource-card p {
+    font-size: 1rem;
+    color: #ddd; /* Slightly lighter text for better readability */
+    margin-bottom: 15px;
+  }
+  
+  .resource-link {
+    text-decoration: none;
+    background-color: #00d4ff; /* Blue button */
+    color: black;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  .resource-link:hover {
+    background-color: #00b0cc; /* Slightly darker blue on hover */
+  }
+  
+  .resource-type {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    background-color: rgba(0, 212, 255, 0.3); /* Light blue background for type */
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    color: #00d4ff; /* Light blue text */
+  }
+  
+  /* Pulse effect for the heading */
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.05);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  

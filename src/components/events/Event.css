@@ -1,0 +1,93 @@
+/* Event page container */
+.events-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    padding: 40px;
+    min-height: 100vh;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  /* Heading */
+  .events-heading {
+    font-size: 3rem;
+    color: #00e6e6;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-shadow: 0 0 20px rgba(0, 230, 230, 0.7);
+  }
+  
+  /* Event cards grid */
+  .events-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    width: 100%;
+  }
+  
+  /* Individual event card */
+  .event-card {
+    background: rgb(33, 32, 32);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .event-card:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 0 30px rgba(0, 255, 255, 0.6);
+  }
+  
+  /* Card content */
+  .event-card-content h2 {
+    font-size: 1.8rem;
+    color: #00ffcc;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+  }
+  
+  .event-date {
+    font-size: 1.2rem;
+    color: #ff007f;
+    margin-bottom: 15px;
+  }
+  
+  .event-card-content p {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+  
+  /* Register button */
+  .register-btn {
+    background: linear-gradient(45deg, #00ffcc, #ff007f);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .register-btn:hover {
+    background: linear-gradient(45deg, #00d4ff, #ff6600);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    .events-heading {
+      font-size: 2rem;
+    }
+  
+    .register-btn {
+      padding: 8px 16px;
+    }
+  }
+  

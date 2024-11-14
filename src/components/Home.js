@@ -29,7 +29,10 @@ const Home = () => {
           </div>
         </motion.div>
 
+        
+
       </section>
+      
 {/* About Us Section */}
 <section className="about-us">
   <div className="about-content">

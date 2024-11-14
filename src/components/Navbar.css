@@ -217,7 +217,7 @@
     font-size: 18px;
     color: #fff;
     text-decoration: none;
-    padding: 5px 20px;
+    padding: 5px 40px;
     display: block;
     transition: 0.3s ease;
     text-transform: uppercase;
@@ -253,7 +253,7 @@
     border: 2px solid #00ffcc; /* Futuristic neon border */
     color: #00ffcc;
     font-size: 1rem;
-    padding: 10px 20px;
+    
     border-radius: 10px;
     cursor: pointer;
     position: relative;
@@ -261,7 +261,7 @@
     transition: all 0.4s ease;
     overflow: hidden;
     padding: 8px 22px;
-    margin-left: 20px;
+    margin-left: 40px;
   }
   
   .navbar-links-mobile li button::before {

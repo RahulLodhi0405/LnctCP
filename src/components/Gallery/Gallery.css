@@ -1,80 +1,141 @@
-/* Gallery Section */
-.gallery-section {
-    padding: 50px;
-    background-color: #0d0d0d;
-    text-align: center;
-  }
-  
-  .gallery-section h2 {
-    font-size: 2.5rem;
-    color: #00d4ff;
-    margin-bottom: 40px;
-    text-shadow: 0 0 20px #00d4ff;
-  }
-  
-  /* Gallery Container */
-  .gallery-container {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    overflow: hidden;
-    white-space: nowrap;
-    padding: 10px;
-  }
-  
-  /* Individual Gallery Card */
-  .gallery-card {
-    display: inline-block;
-    width: 300px;
-    height: 200px;
-    margin: 0 20px;
-    background: rgba(0, 0, 0, 0.8);
-    border-radius: 15px;
-    box-shadow: 0 0 20px rgba(0, 212, 255, 0.5);
-    overflow: hidden;
-    transition: transform 0.3s ease;
-  }
-  
-  /* Image inside the Gallery Card */
-  .gallery-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: all 0.5s ease;
-    border-radius: 15px;
-  }
-  
-  /* Hover Effect on Card */
-  .gallery-card:hover .gallery-image {
-    transform: scale(1.1);
-  }
-  
-  /* Neon Effect */
-  .gallery-card {
-    filter: drop-shadow(0 0 15px #00d4ff);
-  }
-  
-  .gallery-card:hover {
-    filter: drop-shadow(0 0 30px #00d4ff);
-  }
+/* General reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-  /* Add these to the existing gallery CSS */
-@keyframes slide {
-    0% {
-      transform: translateX(0);
-    }
-    100% {
-      transform: translateX(-100%);
-    }
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #1d1f2f, #282a3f);
+  color: #fff;
+  overflow-x: hidden;
+}
+
+/* Main container */
+.gallery-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+h1 {
+  font-size: 2.5rem;
+    color: #00d4ff;
+    text-shadow: 0 0 15px #00d4ff, 0 0 30px #02a9e0;
+    animation: neonGlow 2s infinite alternate;
+
+}
+
+/* Gallery grid */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  perspective: 1000px; /* 3D perspective */
+}
+
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+  transition: transform 0.4s ease;
+  transform-style: preserve-3d;
+}
+
+/* Hover animation for futuristic feel */
+.gallery-item:hover {
+  transform: scale(1.1) rotateY(3deg);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.7);
+}
+
+/* Image styling */
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.4s ease;
+  border-radius: 15px;
+}
+
+.gallery-item:hover img {
+  opacity: 0.8;
+}
+
+/* Lightbox styling */
+.lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.3s ease-in-out;
+}
+
+.lightbox.active {
+  visibility: visible;
+  opacity: 1;
+}
+
+.lightbox-image {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(255, 255, 255, 0.5);
+}
+
+.close-lightbox {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 2rem;
+  color: #fff;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.close-lightbox:hover {
+  color: #00d4ff;
+}
+
+/* Glowing neon border effect */
+.gallery-item::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  z-index: 1;
+  border-radius: 15px;
+  alt: linear-gradient(3deg, #00d4ff, #ff007f, #ff9900, #00ff00);
+  background-size: 400% 400%;
+  opacity: 0;
+  animation: glow 8s ease-in-out infinite;
+  transition: opacity 0.5s ease;
+}
+
+.gallery-item:hover::before {
+  opacity: 1;
+}
+
+@keyframes glow {
+  0% {
+    background-position: 0% 50%;
   }
-  
-  .gallery-container {
-    display: flex;
-    animation: slide 20s linear infinite;
+  50% {
+    background-position: 100% 50%;
   }
-  
-  .gallery-card {
-    flex-shrink: 0; /* Prevent cards from shrinking */
+  100% {
+    background-position: 0% 50%;
   }
-  
-  
+}
