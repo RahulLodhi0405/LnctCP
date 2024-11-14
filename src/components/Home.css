@@ -340,82 +340,6 @@ br
     background-color: #02a9e0;
   }
   
-  /* Resources Section */
-  .resources {
-    
-    padding: 50px 20px;
-    text-align: center;
-  }
-  
-  .resources ul {
-    list-style: none;
-    padding: 0;
-  }
-  
-  .resources li {
-    margin: 10px 0;
-  }
-  
-  .resources a {
-    color: #00d4ff;
-    text-decoration: none;
-    font-size: 1.2rem;
-    transition: color 0.3s ease;
-  }
-  
-  .resources a:hover {
-    color: #02a9e0;
-  }
-  
-  /* Footer */
-  footer {
-   
-    padding: 30px 0;
-    text-align: center;
-    color: #888;
-  }
-  
-  footer p {
-    font-size: 1rem;
-  }
- 
-  
-  /* Leaderboard Section */
-  .leaderboard {
-   
-    padding: 50px 20px;
-    text-align: center;
-  }
-  
-  .leaderboard-cards {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-  
-  .leaderboard-card {
-    background-color: #333;
-    width: 300px;
-    padding: 20px;
-    margin: 15px;
-    border-radius: 15px;
-    box-shadow: 0px 0px 10px rgba(0, 212, 255, 0.6);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-  
-  .leaderboard-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0px 0px 25px rgba(0, 212, 255, 0.8);
-  }
-  
-  .leaderboard-card h3 {
-    color: #00d4ff;
-  }
-  
-  .leaderboard-card p {
-    color: #bbb;
-  }
-
   /* Center the logo and text */
 .logo-container {
   display: flex;
@@ -520,7 +444,7 @@ br
 /* Team member card with hover effect */
 .team-member {
   width: 180px;
-  height: 220px;
+  height: 250px;
   position: relative;
   perspective: 1000px;
   transition: transform 0.6s ease-in-out;
@@ -543,6 +467,7 @@ br
   object-fit: cover;
   border-radius: 15px;
   transition: transform 0.4s ease;
+  padding-bottom: 20px;
 }
 
 .team-member img:hover {
@@ -555,13 +480,14 @@ br
   bottom: 0;
   left: 0;
   right: 0;
-  background: rgba(0, 212, 255, 0.9);
+  background: rgba(228, 214, 225, 0.9);
   color: #000;
-  font-size: 1.2rem;
-  padding: 10px;
+  font-size: 1rem;
+  padding: 3px;
   text-align: center;
   text-transform: uppercase;
   transition: background 0.3s ease;
+ 
 }
 
 .team-member h3:hover {
@@ -685,40 +611,6 @@ footer p {
   to {
     text-shadow: 0 0 25px rgba(0, 255, 255, 0.9), 0 0 80px rgba(0, 255, 255, 0.5);
   }
-}
-
-/* Footer Background Animation */
-footer::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: radial-gradient(circle at center, rgba(0, 255, 255, 0.1), transparent);
-  z-index: 0;
-  opacity: 0.5;
-  animation: backgroundPulse 8s infinite alternate;
-}
-
-@keyframes backgroundPulse {
-  from {
-    transform: scale(1);
-  }
-  to {
-    transform: scale(1.1);
-  }
-}
-
-/* Footer */
-footer {
-
-  color: #ccc;
-  padding: 40px 20px;
-  text-align: center;
-  border-top: 1px solid rgba(255, 255, 255, 0.2);
-  position: relative;
-  box-shadow: 0 0 40px rgba(0, 212, 255, 0.6);
 }
 
 /* Footer Content */
@@ -971,5 +863,3 @@ footer {
   background-color: #007a99;
   box-shadow: 0 0 20px #00d4ff, 0 0 40px rgba(0, 212, 255, 0.7);
 }
-
-

@@ -2,7 +2,7 @@ import React from "react";
 import { motion } from "framer-motion"; // For animations
 import "./Home.css"; // Custom styles
 import Logo from '../Assets/Logo.png'; // Club logo
-import { FaLinkedin, FaDiscord, FaGithub, FaTwitter } from 'react-icons/fa'; // Font Awesome Icons
+import { FaLinkedin, FaDiscord, FaGithub, FaTwitter, FaInstagram } from 'react-icons/fa'; // Font Awesome Icons
 import Rahul from '../Assets/Rahul.png'; // Example team image (replace with actual)
 import Priyanshu from '../Assets/Priyanshu.png';
 import Adarshsir from '../Assets/Adarshsir.png';
@@ -106,46 +106,85 @@ const Home = () => {
       <br></br>
       <br></br>
       <br></br>
-
-      {/* Our Team Section */}
-      <section className="our-team">
-        <h2>Our Team</h2>
-        <br></br><br></br>
-        <div className="coordinator">
-          
-          <img src={Adarshsir} alt="Coordinator" />
-          <h3>Coordinator</h3>
-          <p>Prof. Adarsh Raushan </p>
-          <div className="social-media">
-            <FaLinkedin className="social-icon" />
-            <FaTwitter className="social-icon" />
-          </div>
-        </div>
-        <div className="team-grid">
-  <div className="team-member">
-    <img src={Priyanshu} alt="President" />
-    <h3>Priyanshu Lohani</h3> {/* Name */}
-    <p>President</p> {/* Role */}
-   
-    <div className="social-media">
-      <FaLinkedin className="social-icon" />
-      <FaTwitter className="social-icon" />
-    </div>
-  </div>
-
-  <div className="team-member">
-    <img src={Rahul} alt="Vice President" />
-    <h3>Rahul Lodhi</h3> {/* Name */}
-    <p>Vice President</p> {/* Role */}
+{/* Our Team Section */}
+<section className="our-team">
+  <h2>Our Team</h2>
+  <br /><br />
   
+  {/* Coordinator Section */}
+  <div className="coordinator">
+    <img src={Adarshsir} alt="Coordinator" />
+    <h3>Coordinator</h3>
+    <p>Prof. Adarsh Raushan</p>
     <div className="social-media">
-      <FaGithub className="social-icon" />
-      <FaDiscord className="social-icon" />
+    <a href="https://linkedin.com/in/priyanshu-lohani" target="_blank" rel="noopener noreferrer">
+          <FaLinkedin className="social-icon" /></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="https://twitter.com/priyanshu-lohani" target="_blank" rel="noopener noreferrer">
+          <FaTwitter className="social-icon" />
+           </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="https://github.com/RahulLodhi0405" target="_blank" rel="noopener noreferrer">
+          <FaGithub className="social-icon" /> 
+          </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="https://instagram.com/_rahul.lodhi_" target="_blank" rel="noopener noreferrer">
+          <FaInstagram className="social-icon" />
+        </a> 
     </div>
   </div>
-</div>
 
-      </section>
+  {/* Team Grid */}
+  <div className="team-grid">
+    
+    {/* Team Member 1 */}
+    <div className="team-member">
+      <img src={Priyanshu} alt="President" />
+      <h3>Priyanshu Lohani  <p>President</p> <a href="https://linkedin.com/in/priyanshu-lohani" target="_blank" rel="noopener noreferrer">
+          <FaLinkedin className="social-icon" /></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="https://twitter.com/priyanshu-lohani" target="_blank" rel="noopener noreferrer">
+          <FaTwitter className="social-icon" />
+           </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="https://github.com/RahulLodhi0405" target="_blank" rel="noopener noreferrer">
+          <FaGithub className="social-icon" /> 
+          </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="https://instagram.com/_rahul.lodhi_" target="_blank" rel="noopener noreferrer">
+          <FaInstagram className="social-icon" />
+        </a>  </h3> 
+
+
+      <p className="role">President</p> {/* Role */}
+      <div className="social-media">
+      </div>
+    </div>
+
+    {/* Team Member 2 */}
+    <div className="team-member">
+      <img src={Rahul} alt="Vice President" />
+      <h3>Rahul Lodhi <p>Vice President</p> <a href="https://linkedin.com/in/priyanshu-lohani" target="_blank" rel="noopener noreferrer">
+          <FaLinkedin className="social-icon" /></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="https://twitter.com/priyanshu-lohani" target="_blank" rel="noopener noreferrer">
+          <FaTwitter className="social-icon" />
+           </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="https://github.com/RahulLodhi0405" target="_blank" rel="noopener noreferrer">
+          <FaGithub className="social-icon" /> 
+          </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="https://instagram.com/_rahul.lodhi_" target="_blank" rel="noopener noreferrer">
+          <FaInstagram className="social-icon" />
+        </a> </h3>
+
+
+      <p className="role">Vice President</p> {/* Role */}
+      <div className="social-media">
+        <a href="https://github.com/RahulLodhi0405" target="_blank" rel="noopener noreferrer">
+          <FaGithub className="social-icon" />
+        </a>
+        <a href="https://discord.com/invite/rahul-lodhi" target="_blank" rel="noopener noreferrer">
+          <FaDiscord className="social-icon" />
+        </a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
 
       <section className="contact-section">
       <motion.div

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom'; // Import Link from react-router-dom
+import { Link } from 'react-router-dom'; 
 import './Navbar.css';
-import collegeLogo from '../Assets/CollegeLogo.png'; // Path to your college logo
+import collegeLogo from '../Assets/CollegeLogo.png'; 
 import 'font-awesome/css/font-awesome.min.css';
 
 const Navbar = () => {
@@ -15,15 +15,14 @@ const Navbar = () => {
         </a>
       </div>
       <ul className={isMobile ? "navbar-links-mobile" : "navbar-links"} onClick={() => setIsMobile(false)}>
-        <li><Link to="/">Home</Link></li> {/* Link to Home */}
+        <li><Link to="/">Home</Link></li> 
         <li><Link to="/events">Events</Link></li>
         <li><Link to="/resources">Resources</Link></li>
         <li><Link to="/blog">blog</Link></li>
-        
-        
-        <li><Link to="/gallery">Gallery</Link></li> {/* Link to Gallery */}
-        <li><a href="#contact">Contact</a></li>
-        <li><a href="#members">Discussion</a></li>
+        <li><Link to="/gallery">Gallery</Link></li>
+        <li><Link to="/contact">contact</Link></li>
+        <li><Link to="/Discussion">Discussion</Link></li>
+       
         <li><button>Login</button></li>
       </ul>
       <button className="mobile-menu-icon" onClick={() => setIsMobile(!isMobile)}>

@@ -8,6 +8,7 @@ import Gallery from './components/Gallery/Gallery';
 import Events from './components/events/Event';
 import Resources from './components/Resources/Resource';
 import Blog from './components/Blog/Blog';
+import Contact from './components/contact/Contact';
 function App() {
   return (
     <Router>
@@ -23,6 +24,7 @@ function App() {
           <Route path="/events" element={<Events />} /> {/*  page route */}
           <Route path="/resources" element={<Resources />} /> {/*  page route */}
           <Route path="/blog" element={<Blog />} /> {/*  page route */}
+          <Route path="/contact" element={<Contact/>} /> {/*  page route */}
         </Routes>
       </div>
     </Router>
