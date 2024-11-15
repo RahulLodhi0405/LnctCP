@@ -7,6 +7,7 @@ import Rahul from '../Assets/Rahul.png'; // Example team image (replace with act
 import Priyanshu from '../Assets/Priyanshu.png';
 import Adarshsir from '../Assets/Adarshsir.png';
 import about from '../Assets/about.png';
+import Adarsh from '../Assets/Adarsh.png';
 
 const Home = () => {
   return (
@@ -130,7 +131,7 @@ const Home = () => {
         </a> 
     </div>
   </div>
-
+  <br></br><br></br>
   {/* Team Grid */}
   <div className="team-grid">
     
@@ -138,13 +139,13 @@ const Home = () => {
     <div className="team-member">
       <img src={Priyanshu} alt="President" />
       <h3>Priyanshu Lohani  <p>President</p> <a href="https://www.linkedin.com/in/priyanshulohani/" target="_blank" rel="noopener noreferrer">
-          <FaLinkedin className="social-icon" /></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <FaLinkedin className="social-icon" /></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <a href="https://twitter.com/iamlohanip" target="_blank" rel="noopener noreferrer">
           <FaTwitter className="social-icon" />
-           </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+           </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <a href="https://github.com/PriDev07" target="_blank" rel="noopener noreferrer">
           <FaGithub className="social-icon" /> 
-          </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <a href="https://instagram.com/priyanshulohanii" target="_blank" rel="noopener noreferrer">
           <FaInstagram className="social-icon" />
         </a>  </h3> 
@@ -159,13 +160,13 @@ const Home = () => {
     <div className="team-member">
       <img src={Rahul} alt="Vice President" />
       <h3>Rahul Lodhi <p>Vice President</p> <a href="https://linkedin.com/in/rahullodhisdr" target="_blank" rel="noopener noreferrer">
-          <FaLinkedin className="social-icon" /></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <FaLinkedin className="social-icon" /></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <a href="https://twitter.com/Rahul_P_A_S" target="_blank" rel="noopener noreferrer">
           <FaTwitter className="social-icon" />
-           </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+           </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <a href="https://github.com/RahulLodhi0405" target="_blank" rel="noopener noreferrer">
           <FaGithub className="social-icon" /> 
-          </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <a href="https://instagram.com/_rahul.lodhi_" target="_blank" rel="noopener noreferrer">
           <FaInstagram className="social-icon" />
         </a> </h3>
@@ -179,6 +180,25 @@ const Home = () => {
 
   </div>
 </section>
+<br></br> <br></br><br></br><br></br>
+<div className="coordinator">
+    <img src={Adarsh} alt="Coordinator" />
+    <h3>Creative Head</h3>
+    <p>Adarsh Gupta</p>
+    <div className="social-media">
+    <a href="https://www.linkedin.com/in/idealgupta/" target="_blank" rel="noopener noreferrer">
+          <FaLinkedin className="social-icon" /></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
+          <FaTwitter className="social-icon" />
+           </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="https://github.com" target="_blank" rel="noopener noreferrer">
+          <FaGithub className="social-icon" /> 
+          </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+          <FaInstagram className="social-icon" />
+        </a> 
+    </div>
+    </div>
 
 
       <section className="contact-section">

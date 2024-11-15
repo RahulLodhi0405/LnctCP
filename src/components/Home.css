@@ -480,7 +480,7 @@ br
   bottom: 0;
   left: 0;
   right: 0;
-  background: rgba(228, 214, 225, 0.9);
+  background: rgba(72, 144, 186, 0.9);
   color: #000;
   font-size: 1rem;
   padding: 3px;
@@ -495,6 +495,17 @@ br
   letter-spacing: 1px;
 }
 
+.team-member p{
+  font: 1em serif;
+  background-color: #195c5e;
+  border-radius: 5px;
+  color: #f5eaea;
+}
+
+.social-media{
+ padding: 10px;
+
+}
 .coordinator img {
   width: 180px;
   height: 180px;
