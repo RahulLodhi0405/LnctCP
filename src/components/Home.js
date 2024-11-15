@@ -117,15 +117,15 @@ const Home = () => {
     <h3>Coordinator</h3>
     <p>Prof. Adarsh Raushan</p>
     <div className="social-media">
-    <a href="https://linkedin.com/in/priyanshu-lohani" target="_blank" rel="noopener noreferrer">
+    <a href="https://www.linkedin.com/in/adarsh-raushan-a0ba89141/" target="_blank" rel="noopener noreferrer">
           <FaLinkedin className="social-icon" /></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <a href="https://twitter.com/priyanshu-lohani" target="_blank" rel="noopener noreferrer">
+        <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
           <FaTwitter className="social-icon" />
            </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <a href="https://github.com/RahulLodhi0405" target="_blank" rel="noopener noreferrer">
+        <a href="https://github.com" target="_blank" rel="noopener noreferrer">
           <FaGithub className="social-icon" /> 
           </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <a href="https://instagram.com/_rahul.lodhi_" target="_blank" rel="noopener noreferrer">
+        <a href="https://instagram.com/adarshraushan1995" target="_blank" rel="noopener noreferrer">
           <FaInstagram className="social-icon" />
         </a> 
     </div>
@@ -137,15 +137,15 @@ const Home = () => {
     {/* Team Member 1 */}
     <div className="team-member">
       <img src={Priyanshu} alt="President" />
-      <h3>Priyanshu Lohani  <p>President</p> <a href="https://linkedin.com/in/priyanshu-lohani" target="_blank" rel="noopener noreferrer">
+      <h3>Priyanshu Lohani  <p>President</p> <a href="https://www.linkedin.com/in/priyanshulohani/" target="_blank" rel="noopener noreferrer">
           <FaLinkedin className="social-icon" /></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <a href="https://twitter.com/priyanshu-lohani" target="_blank" rel="noopener noreferrer">
+        <a href="https://twitter.com/iamlohanip" target="_blank" rel="noopener noreferrer">
           <FaTwitter className="social-icon" />
            </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <a href="https://github.com/RahulLodhi0405" target="_blank" rel="noopener noreferrer">
+        <a href="https://github.com/PriDev07" target="_blank" rel="noopener noreferrer">
           <FaGithub className="social-icon" /> 
           </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <a href="https://instagram.com/_rahul.lodhi_" target="_blank" rel="noopener noreferrer">
+        <a href="https://instagram.com/priyanshulohanii" target="_blank" rel="noopener noreferrer">
           <FaInstagram className="social-icon" />
         </a>  </h3> 
 
@@ -158,9 +158,9 @@ const Home = () => {
     {/* Team Member 2 */}
     <div className="team-member">
       <img src={Rahul} alt="Vice President" />
-      <h3>Rahul Lodhi <p>Vice President</p> <a href="https://linkedin.com/in/priyanshu-lohani" target="_blank" rel="noopener noreferrer">
+      <h3>Rahul Lodhi <p>Vice President</p> <a href="https://linkedin.com/in/rahullodhisdr" target="_blank" rel="noopener noreferrer">
           <FaLinkedin className="social-icon" /></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <a href="https://twitter.com/priyanshu-lohani" target="_blank" rel="noopener noreferrer">
+        <a href="https://twitter.com/Rahul_P_A_S" target="_blank" rel="noopener noreferrer">
           <FaTwitter className="social-icon" />
            </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <a href="https://github.com/RahulLodhi0405" target="_blank" rel="noopener noreferrer">
@@ -173,12 +173,7 @@ const Home = () => {
 
       <p className="role">Vice President</p> {/* Role */}
       <div className="social-media">
-        <a href="https://github.com/RahulLodhi0405" target="_blank" rel="noopener noreferrer">
-          <FaGithub className="social-icon" />
-        </a>
-        <a href="https://discord.com/invite/rahul-lodhi" target="_blank" rel="noopener noreferrer">
-          <FaDiscord className="social-icon" />
-        </a>
+        
       </div>
     </div>
 
