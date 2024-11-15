@@ -1,0 +1,134 @@
+/* Global Styles */
+body {
+    font-family: sans-serif;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3 {
+    color: #00d4ff;
+    text-shadow: 0 0 10px #00d4ff;
+}
+
+/* Opportunities Container */
+.opportunities-container {
+    padding: 50px;
+    text-align: center;
+}
+
+/* Opportunities Header */
+.opportunities-header {
+    font-size: 3rem;
+    margin-bottom: 30px;
+    animation: pulse 2s infinite ease-in-out;
+}
+
+/* Opportunities Grid */
+.opportunities-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 40px;
+    justify-items: center;
+    margin-top: 20px;
+}
+
+/* Opportunity Card */
+.opportunity-card {
+    background: rgba(12, 144, 170, 0.1); /* Light blue background */
+    padding: 20px;
+    border-radius: 12px;
+    width: 300px;
+    box-shadow: 0 0 20px rgba(0, 212, 255, 0.5);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+    text-align: left;
+}
+
+/* Hover Effect */
+.opportunity-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 40px rgba(0, 212, 255, 0.7);
+}
+
+/* Opportunity Image */
+.opportunity-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: opacity 0.3s ease;
+}
+
+.opportunity-card:hover img {
+    opacity: 0.8;
+}
+
+/* Company Name */
+.opportunity-card h3 {
+    font-size: 1.5rem;
+    color: #00d4ff;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+/* Role and Eligibility */
+.opportunity-card p {
+    color: #ddd;
+    font-size: 1rem;
+    margin-top: 10px;
+}
+
+/* Apply Now Button */
+.apply-now-btn {
+    text-decoration: none;
+    background-color: #00d4ff;
+    color: black;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background-color 0.3s ease-in-out;
+    margin-top: 10px;
+}
+
+.apply-now-btn:hover {
+    background-color: #68b8c4;
+}
+
+/* Pulse Effect for the Heading */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Search Bar */
+.search-bar {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.search-bar input {
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 10px;
+    border: none;
+    width: 80%;
+    max-width: 400px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    box-shadow: 0 0 5px #00d4ff;
+    outline: none;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.search-bar input:focus {
+    background-color: rgba(202, 214, 216, 0.2);
+}

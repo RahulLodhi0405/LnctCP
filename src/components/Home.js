@@ -57,27 +57,7 @@ const Home = () => {
     </div>
   </div>
 </section>
-<section className="card-grid-section">
-  <h2>Featured Projects</h2>
-  <div className="card-grid">
-    <div className="card">
-      <h3>Project 1</h3>
-      <p>Explore our latest coding challenges and improve your skills.</p>
-    </div>
-    <div className="card">
-      <h3>Project 2</h3>
-      <p>Get involved in competitive programming events and contests.</p>
-    </div>
-    <div className="card">
-      <h3>Project 3</h3>
-      <p>Join our hackathons and collaborate on innovative solutions.</p>
-    </div>
-    <div className="card">
-      <h3>Project 4</h3>
-      <p>Learn and grow by solving complex algorithm challenges.</p>
-    </div>
-  </div>
-</section>
+
 
 
       {/* Upcoming Events Section */}
@@ -107,6 +87,44 @@ const Home = () => {
       <br></br>
       <br></br>
       <br></br>
+
+
+      
+<section className="card-grid-section">
+  <h2>Featured Projects</h2>
+  <div className="card-grid">
+    <div className="card">
+      <h3>Project 1</h3>
+      <p>Explore our latest coding challenges and improve your skills.</p>
+    </div>
+    <div className="card">
+      <h3>Project 2</h3>
+      <p>Get involved in competitive programming events and contests.</p>
+    </div>
+    <div className="card">
+      <h3>Project 3</h3>
+      <p>Join our hackathons and collaborate on innovative solutions.</p>
+    </div>
+    <div className="card">
+      <h3>Project 4</h3>
+      <p>Learn and grow by solving complex algorithm challenges.</p>
+    </div>
+  </div>
+</section>
+
+<br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+
 {/* Our Team Section */}
 <section className="our-team">
   <h2>Our Team</h2>
