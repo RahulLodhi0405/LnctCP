@@ -312,4 +312,21 @@
     opacity: 1;
   }
   
-  
+
+/* lue text shadow */
+.navbar-link.active {
+  color: #0ff;
+  transform: translateY(-5px);
+  text-shadow: 0 0 10px rgba(0, 255, 255, 1), 0 0 20px rgba(0, 255, 255, 0.8); 
+  font-weight: bold; 
+}
+
+
+/* Orange text shadow */
+/* .navbar-link.active {
+  color: #f97316;
+  transform: translateY(-5px);
+  text-shadow: 0 0 10px rgba(249, 115, 22, 1), 0 0 20px rgba(249, 115, 22, 0.8); 
+  font-weight: bold;
+} */
+

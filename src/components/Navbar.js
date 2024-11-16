@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom'; 
+import { NavLink } from 'react-router-dom';  // Use NavLink instead of Link
 import './Navbar.css';
-import collegeLogo from '../Assets/CollegeLogo.png'; 
+import collegeLogo from '../Assets/CollegeLogo.png';
 import 'font-awesome/css/font-awesome.min.css';
 
 const Navbar = () => {
@@ -15,15 +15,86 @@ const Navbar = () => {
         </a>
       </div>
       <ul className={isMobile ? "navbar-links-mobile" : "navbar-links"} onClick={() => setIsMobile(false)}>
-        <li><Link to="/">Home</Link></li> 
-        <li><Link to="/events">Events</Link></li>
-        <li><Link to="/resources">Resources</Link></li>
-        <li><Link to="/blog">blog</Link></li>
-        <li><Link to="/gallery">Gallery</Link></li>
-        <li><Link to="/contact">contact</Link></li>
-        <li><Link to="/opportunities">Opportunities</Link></li>
-        <li><Link to="/Discussion">Discussion</Link></li>
-       
+        <li>
+          <NavLink
+            to="/"
+            className={({ isActive }) => 
+              `navbar-link ${isActive ? "active" : ""}`
+            }
+          >
+            Home
+          </NavLink>
+        </li>
+        <li>
+          <NavLink
+            to="/events"
+            className={({ isActive }) => 
+              `navbar-link ${isActive ? "active" : ""}`
+            }
+          >
+            Events
+          </NavLink>
+        </li>
+        <li>
+          <NavLink
+            to="/resources"
+            className={({ isActive }) => 
+              `navbar-link ${isActive ? "active" : ""}`
+            }
+          >
+            Resources
+          </NavLink>
+        </li>
+        <li>
+          <NavLink
+            to="/blog"
+            className={({ isActive }) => 
+              `navbar-link ${isActive ? "active" : ""}`
+            }
+          >
+            Blog
+          </NavLink>
+        </li>
+        <li>
+          <NavLink
+            to="/gallery"
+            className={({ isActive }) => 
+              `navbar-link ${isActive ? "active" : ""}`
+            }
+          >
+            Gallery
+          </NavLink>
+        </li>
+        <li>
+          <NavLink
+            to="/contact"
+            className={({ isActive }) => 
+              `navbar-link ${isActive ? "active" : ""}`
+            }
+          >
+            Contact
+          </NavLink>
+        </li>
+        <li>
+          <NavLink
+            to="/opportunities"
+            className={({ isActive }) => 
+              `navbar-link ${isActive ? "active" : ""}`
+            }
+          >
+            Opportunities
+          </NavLink>
+        </li>
+        <li>
+          <NavLink
+            to="/discussion"
+            className={({ isActive }) => 
+              `navbar-link ${isActive ? "active" : ""}`
+            }
+          >
+            Discussion
+          </NavLink>
+        </li>
         <li><button>Login</button></li>
       </ul>
       <button className="mobile-menu-icon" onClick={() => setIsMobile(!isMobile)}>
