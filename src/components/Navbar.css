@@ -20,7 +20,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 5px 10px;
-    background: linear-gradient(45deg, #ff00cc, #3333ff);
+    background: linear-gradient(to right, #000 20%, #264f53, #1d7986);
     position: sticky;
     top: 0;
     z-index: 1;
@@ -32,14 +32,12 @@
     animation: backgroundAnimation 5s infinite alternate;
   }
   
-  @keyframes backgroundAnimation {
-    0% {
-      background: linear-gradient(45deg, #0f0f1c, #090809,#1c1573, #3333ff);
-    }
-    100% {
-      background: linear-gradient(45deg, #090809, #050505,#2b1361, #3333ff);
-    }
+  
+  nav {
+    animation: backgroundAnimation 5s infinite alternate;
+    background-size: 400% 400%;
   }
+  
   
   .navbar-logo {
     display: flex;
@@ -196,17 +194,19 @@
   /* Mobile Menu */
   .navbar-links-mobile {
     display:table-column;
-    background: linear-gradient(45deg, #151502 , #230b98);
+    background: rgb(0, 0, 0);
     z-index:-1;
     position: fixed;
     top: 70px;
     right:400px;
-    opacity: 0.6;
-    padding: 10px 20px;
+    opacity: 1;
+    padding: 0px 20px;
     text-align: left;
     gap: 20px;
     transform: translateX(100%);
     transition: transform 0.3s ease-in-out;
+    height: 100vh;
+    
   }
   
   .navbar-links-mobile li {
@@ -214,14 +214,17 @@
   }
   
   .navbar-links-mobile a {
+
+    font-family: serif;
     font-size: 18px;
-    color: #fff;
+    color: #ebe2e2;
     text-decoration: none;
-    padding: 5px 40px;
+    padding: 10px 40px;
     display: block;
     transition: 0.3s ease;
     text-transform: uppercase;
     opacity: 1;
+    
   }
   
   .navbar-links-mobile a:hover {

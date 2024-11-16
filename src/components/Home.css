@@ -8,12 +8,12 @@ body {
     overflow-x: hidden;
   }
   
-  /* Center the logo */
+ 
 .logo-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh; /* Full viewport height */
+  height: 100vh; 
 }
 
 .cp-logo {
@@ -105,7 +105,7 @@ br
   transition: all 0.3s ease-in-out;
 }
 
-/* Adding futuristic glowing particles */
+
 .about-us::before,
 .about-us::after {
   content: '';
@@ -138,7 +138,6 @@ br
   }
 }
 
-/* Cool hover effects on the about image */
 .about-content img {
   width: 300px;
   height: 150px;
@@ -209,14 +208,14 @@ br
   text-shadow: 0 0 10px #00ff99, 0 0 20px #00ff99;
 }
 
-/* Card paragraph styling */
+
 .card p {
   font-size: 1rem;
   color: #e0e0e0;
   margin-bottom: 20px;
 }
 
-/* Neon border and glow effect */
+
 .card::before {
   content: '';
   position: absolute;

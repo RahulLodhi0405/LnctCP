@@ -7,7 +7,7 @@ const Events = () => {
   const events = [
     {
       title: 'Code Sprint',
-      date: '2024-12-05T00:00:00',  // Make sure to use an exact date-time format
+      date: '2024-12-05T00:00:00', 
       description: 'Compete with the best coders in a 5-hour challenge and showcase your competitive programming skills.',
     },
     {

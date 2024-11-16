@@ -26,7 +26,8 @@ const Opportunities = () => {
       image: 'https://tse1.mm.bing.net/th?id=OIP.oo2bk7LzvHCqkL6_Ai7m4AHaE9&pid=Api&P=0&h=180',
       link: 'https://www.amazon.jobs',
     },
-    // Add more opportunities as needed
+    
+    
   ];
 
   const handleSearch = (e) => {

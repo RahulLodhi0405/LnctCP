@@ -18,15 +18,15 @@ function App() {
         <Navbar />
         <Particles id="tsparticles" />
 
-        {/* Define routes for different pages */}
+      
         <Routes>
-          <Route path="/" element={<Home />} /> {/* Home page route */}
-          <Route path="/gallery" element={<Gallery />} /> {/* Gallery page route */}
-          <Route path="/events" element={<Events />} /> {/*  page route */}
-          <Route path="/resources" element={<Resources />} /> {/*  page route */}
-          <Route path="/blog" element={<Blog />} /> {/*  page route */}
-          <Route path="/contact" element={<Contact/>} /> {/*  page route */}
-          <Route path="/opportunities" element={<Opportunities/>} /> {/*  page route */}
+          <Route path="/" element={<Home />} /> 
+          <Route path="/gallery" element={<Gallery />} /> 
+          <Route path="/events" element={<Events />} />
+          <Route path="/resources" element={<Resources />} /> 
+          <Route path="/blog" element={<Blog />} /> 
+          <Route path="/contact" element={<Contact/>} /> 
+          <Route path="/opportunities" element={<Opportunities/>} /> 
         </Routes>
       </div>
     </Router>
