@@ -248,8 +248,7 @@ const Home = () => {
         </form>
       </motion.div>
     </section>
-  
-
+ 
 {/* Footer Section */}
 <footer>
   <div className="footer-content">
