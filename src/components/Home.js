@@ -248,6 +248,58 @@ const Home = () => {
         </form>
       </motion.div>
     </section>
+
+    <section className="sliding-images-section">
+  
+  <div className="sliding-images">
+    <div className="image-container-left-to-right">
+      <img src="https://img.freepik.com/free-vector/laptop-with-program-code-isometric-icon-software-development-programming-applications-dark-neon_39422-971.jpg?ga=GA1.1.1767342982.1726574862&semt=ais_hybrid" alt="Sponsor 1" className="sliding-image" />
+      <img src="https://img.freepik.com/free-photo/professional-programmer-working-late-dark-office_1098-18705.jpg?ga=GA1.1.1767342982.1726574862&semt=ais_hybrid" alt="Sponsor 2" className="sliding-image" />
+      <img src="https://img.freepik.com/free-photo/programming-background-with-person-working-with-codes-computer_23-2150010129.jpg?ga=GA1.1.1767342982.1726574862&semt=ais_hybrid" alt="Sponsor 3" className="sliding-image" />
+      <img src="https://img.freepik.com/free-photo/programming-background-with-person-working-with-codes-computer_23-2150010128.jpg?ga=GA1.1.1767342982.1726574862&semt=ais_hybrid" alt="Sponsor 4" className="sliding-image" />
+      <img src="https://img.freepik.com/free-photo/html-css-collage-concept-with-person_23-2150062008.jpg?ga=GA1.1.1767342982.1726574862&semt=ais_hybrid" alt="Sponsor 5" className="sliding-image" />
+      <img src="https://img.freepik.com/free-photo/person-front-computer-working-html_23-2150040433.jpg?ga=GA1.1.1767342982.1726574862&semt=ais_hybrid" alt="Sponsor 1" className="sliding-image" />
+  <img src="https://img.freepik.com/free-photo/programming-background-with-person-working-with-codes-computer_23-2150010125.jpg?ga=GA1.1.1767342982.1726574862&semt=ais_hybrid" alt="Sponsor 2" className="sliding-image" />
+  <img src="https://img.freepik.com/free-photo/ai-site-helping-with-software-production_1268-21620.jpg?ga=GA1.1.1767342982.1726574862&semt=ais_hybrid" alt="Sponsor 1" className="sliding-image" />
+  <img src="https://img.freepik.com/free-photo/html-css-collage-concept-with-person_23-2150062006.jpg?ga=GA1.1.1767342982.1726574862&semt=ais_hybrid" alt="Sponsor 2" className="sliding-image" />
+  <img src="https://img.freepik.com/free-photo/male-programmer-coding-laptop_482257-87912.jpg?ga=GA1.1.1767342982.1726574862&semt=ais_hybrid" alt="Sponsor 2" className="sliding-image" />
+  <img src="https://img.freepik.com/free-photo/person-working-html-computer_23-2150038840.jpg?ga=GA1.1.1767342982.1726574862&semt=ais_hybrid" alt="Sponsor 2" className="sliding-image" />
+  <img src="https://img.freepik.com/free-photo/programming-background-with-person-working-with-codes-computer_23-2150010115.jpg?ga=GA1.1.1767342982.1726574862&semt=ais_hybrid" alt="Sponsor 2" className="sliding-image" />
+  <img src="https://img.freepik.com/free-photo/programming-software-code-application-technology-concept_53876-123931.jpg?ga=GA1.1.1767342982.1726574862&semt=ais_hybrid" alt="Sponsor 2" className="sliding-image" />
+  <img src="https://img.freepik.com/free-photo/html-css-collage-concept_23-2150061960.jpg?ga=GA1.1.1767342982.1726574862&semt=ais_hybrid" alt="Sponsor 2" className="sliding-image" />
+    </div>
+  </div>
+</section>
+
+    <section className="sliding-images-section">
+  
+  <div className="sliding-images">
+    <div className="image-container-right-to-left">
+      <img src="https://img.freepik.com/free-photo/double-exposure-caucasian-man-virtual-reality-vr-headset-is-presumably-gamer-hacker-cracking-code-into-secure-network-server-with-lines-code-green_146671-18932.jpg?ga=GA1.1.1767342982.1726574862&semt=ais_hybrid" alt="Sponsor 1" className="sliding-image" />
+      <img src="https://img.freepik.com/free-photo/freelancing-cybersecurity-admin-using-computer-prevent-cyber-attacks_482257-82942.jpg?ga=GA1.1.1767342982.1726574862&semt=ais_hybrid" alt="Sponsor 2" className="sliding-image" />
+      <img src="https://img.freepik.com/free-photo/cyber-attack-with-unrecognizable-hooded-hacker-using-virtual-reality-digital-glitch-effect_146671-18951.jpg?ga=GA1.1.1767342982.1726574862&semt=ais_hybrid" alt="Sponsor 3" className="sliding-image" />
+      <img src="https://img.freepik.com/free-photo/it-specialist-checking-code-computer-dark-office-night_1098-18699.jpg?ga=GA1.1.1767342982.1726574862&semt=ais_hybrid" alt="Sponsor 4" className="sliding-image" />
+      <img src="https://img.freepik.com/free-photo/person-front-computer-working-html_23-2150040413.jpg?ga=GA1.1.1767342982.1726574862&semt=ais_hybrid" alt="Sponsor 5" className="sliding-image" />
+      <img src="https://img.freepik.com/free-photo/programming-background-concept_23-2150170131.jpg?ga=GA1.1.1767342982.1726574862&semt=ais_hybrid" alt="Sponsor 1" className="sliding-image" />
+  <img src="https://img.freepik.com/free-photo/programming-background-collage_23-2149901781.jpg?ga=GA1.1.1767342982.1726574862&semt=ais_hybrid" alt="Sponsor 2" className="sliding-image" />
+  <img src="https://img.freepik.com/free-photo/software-programming-web-development-concept_53876-176752.jpg?ga=GA1.1.1767342982.1726574862&semt=ais_hybrid" alt="Sponsor 1" className="sliding-image" />
+  <img src="https://img.freepik.com/free-photo/php-programming-html-coding-cyberspace-concept_53876-124783.jpg?ga=GA1.1.1767342982.1726574862&semt=ais_hybrid" alt="Sponsor 2" className="sliding-image" />
+  <img src="https://img.freepik.com/free-photo/team-database-admins-analyzing-source-code-wall-screen-tv-comparing-errors-using-digital-tablet-busy-server-room-two-cloud-programers-debugging-algorithm-software-innovation-office_482257-43976.jpg?ga=GA1.1.1767342982.1726574862&semt=ais_hybrid" alt="Sponsor 2" className="sliding-image" />
+  <img src="https://img.freepik.com/free-photo/php-programming-html-coding-cyberspace-concept_53876-124097.jpg?ga=GA1.1.1767342982.1726574862&semt=ais_hybrid" alt="Sponsor 2" className="sliding-image" />
+  <img src="https://img.freepik.com/free-photo/person-front-computer-working-html_23-2150040431.jpg?ga=GA1.1.1767342982.1726574862&semt=ais_hybrid" alt="Sponsor 2" className="sliding-image" />
+  <img src="https://img.freepik.com/free-photo/programming-background-with-person-working-with-codes-computer_23-2150010119.jpg?ga=GA1.1.1767342982.1726574862&semt=ais_hybrid" alt="Sponsor 2" className="sliding-image" />
+  <img src="https://img.freepik.com/free-photo/programming-background-concept_23-2150170126.jpg?ga=GA1.1.1767342982.1726574862&semt=ais_hybrid" alt="Sponsor 2" className="sliding-image" />
+    </div>
+  </div>
+</section>
+<br></br>
+<br></br>
+<br></br>
+<br></br>
+<br></br>
+<br></br>
+<br></br>
+     
  
 {/* Footer Section */}
 <footer>

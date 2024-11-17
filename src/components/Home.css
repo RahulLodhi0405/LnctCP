@@ -509,6 +509,69 @@ br
   box-shadow: 0 0 40px rgba(0, 212, 255, 1); /* Intense glow */
 }
 
+/* Styling the section */
+.sliding-images-section {
+  text-align: center;
+  padding: 20px 0;
+
+}
+
+.sliding-images-section h2 {
+  margin-bottom: 10px;
+  font-size: 24px;
+  color: #333;
+}
+
+/* Container for sliding images */
+.sliding-images {
+  overflow: hidden; /* Hide overflowing images */
+  width: 100%;
+  position: relative;
+}
+
+/* Sliding image container for the left-to-right sliding */
+.image-container-left-to-right {
+  display: flex;
+  animation: slide-left-to-right 25s linear infinite; /* Left to right sliding animation */
+}
+
+/* Sliding image container for the right-to-left sliding */
+.image-container-right-to-left {
+  display: flex;
+  animation: slide-right-to-left 25s linear infinite; /* Right to left sliding animation */
+  margin-top: 10px; /* Add space between the two sliders */
+}
+
+/* Individual images */
+.sliding-image {
+  flex-shrink: 0;
+  width: 280px; /* Adjust size as needed */
+  height: auto;
+  margin: 0 15px; /* Space between images */
+  object-fit: contain; /* Maintain image aspect ratio */
+}
+
+/* Keyframes for left to right sliding */
+@keyframes slide-left-to-right {
+  0% {
+    transform: translateX(-100%); /* Start at the left edge */
+  }
+  100% {
+    transform: translateX(0%); /* Move right by 100% of the container width */
+  }
+}
+
+/* Keyframes for right to left sliding (new animation) */
+@keyframes slide-right-to-left {
+  0% {
+    transform: translateX(0%); /* Start at the right edge */
+  }
+  100% {
+    transform: translateX(-100%); /* Move left by 100% of the container width */
+  }
+}
+
+
 
 /* Footer Section */
 footer {

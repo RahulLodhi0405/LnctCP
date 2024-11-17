@@ -16,7 +16,9 @@
     "react-parallax-tilt": "^1.7.253",
     "react-router-dom": "^6.28.0",
     "react-scripts": "5.0.1",
+    "react-slick": "^0.30.2",
     "react-tsparticles": "^2.0.6",
+    "slick-carousel": "^1.8.1",
     "tsparticles": "^2.0.6",
     "tsparticles-slim": "^2.0.6",
     "web-vitals": "^3.0.0"
