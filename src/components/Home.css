@@ -575,7 +575,7 @@ br
 @media (max-width: 768px) {
   @keyframes slide-left-to-right {
     0% {
-      transform: translateX(-1300%); /* Start at the left edge */
+      transform: translateX(-1000%); /* Start at the left edge */
     }
     100% {
       transform: translateX(0%); /* Move right by 100% of the container width */
@@ -588,7 +588,7 @@ br
       transform: translateX(0%); /* Start at the right edge */
     }
     100% {
-      transform: translateX(-1300%); /* Move left by 100% of the container width */
+      transform: translateX(-1000%); /* Move left by 100% of the container width */
     }
   }
   
