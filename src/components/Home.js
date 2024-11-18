@@ -267,6 +267,7 @@ const Home = () => {
   <img src="https://img.freepik.com/free-photo/programming-background-with-person-working-with-codes-computer_23-2150010115.jpg?ga=GA1.1.1767342982.1726574862&semt=ais_hybrid" alt="Sponsor 2" className="sliding-image" />
   <img src="https://img.freepik.com/free-photo/programming-software-code-application-technology-concept_53876-123931.jpg?ga=GA1.1.1767342982.1726574862&semt=ais_hybrid" alt="Sponsor 2" className="sliding-image" />
   <img src="https://img.freepik.com/free-photo/html-css-collage-concept_23-2150061960.jpg?ga=GA1.1.1767342982.1726574862&semt=ais_hybrid" alt="Sponsor 2" className="sliding-image" />
+  <img src="https://img.freepik.com/free-photo/double-exposure-caucasian-man-virtual-reality-vr-headset-is-presumably-gamer-hacker-cracking-code-into-secure-network-server-with-lines-code-green_146671-18932.jpg?ga=GA1.1.1767342982.1726574862&semt=ais_hybrid" alt="Sponsor 1" className="sliding-image" />
     </div>
   </div>
 </section>
@@ -289,6 +290,8 @@ const Home = () => {
   <img src="https://img.freepik.com/free-photo/person-front-computer-working-html_23-2150040431.jpg?ga=GA1.1.1767342982.1726574862&semt=ais_hybrid" alt="Sponsor 2" className="sliding-image" />
   <img src="https://img.freepik.com/free-photo/programming-background-with-person-working-with-codes-computer_23-2150010119.jpg?ga=GA1.1.1767342982.1726574862&semt=ais_hybrid" alt="Sponsor 2" className="sliding-image" />
   <img src="https://img.freepik.com/free-photo/programming-background-concept_23-2150170126.jpg?ga=GA1.1.1767342982.1726574862&semt=ais_hybrid" alt="Sponsor 2" className="sliding-image" />
+  <img src="https://img.freepik.com/free-photo/double-exposure-caucasian-man-virtual-reality-vr-headset-is-presumably-gamer-hacker-cracking-code-into-secure-network-server-with-lines-code-green_146671-18932.jpg?ga=GA1.1.1767342982.1726574862&semt=ais_hybrid" alt="Sponsor 1" className="sliding-image" />
+  <img src="https://img.freepik.com/free-photo/double-exposure-caucasian-man-virtual-reality-vr-headset-is-presumably-gamer-hacker-cracking-code-into-secure-network-server-with-lines-code-green_146671-18932.jpg?ga=GA1.1.1767342982.1726574862&semt=ais_hybrid" alt="Sponsor 1" className="sliding-image" />
     </div>
   </div>
 </section>
