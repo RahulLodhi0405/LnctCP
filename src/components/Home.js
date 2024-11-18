@@ -285,6 +285,9 @@ const Home = () => {
   <img src="https://img.freepik.com/free-photo/software-programming-web-development-concept_53876-176752.jpg?ga=GA1.1.1767342982.1726574862&semt=ais_hybrid" alt="Sponsor 1" className="sliding-image" />
   <img src="https://img.freepik.com/free-photo/php-programming-html-coding-cyberspace-concept_53876-124783.jpg?ga=GA1.1.1767342982.1726574862&semt=ais_hybrid" alt="Sponsor 2" className="sliding-image" />
   <img src="https://img.freepik.com/free-photo/team-database-admins-analyzing-source-code-wall-screen-tv-comparing-errors-using-digital-tablet-busy-server-room-two-cloud-programers-debugging-algorithm-software-innovation-office_482257-43976.jpg?ga=GA1.1.1767342982.1726574862&semt=ais_hybrid" alt="Sponsor 2" className="sliding-image" />
+  <img src="https://img.freepik.com/free-photo/php-programming-html-coding-cyberspace-concept_53876-124097.jpg?ga=GA1.1.1767342982.1726574862&semt=ais_hybrid" alt="Sponsor 2" className="sliding-image" />
+  <img src="https://img.freepik.com/free-photo/person-front-computer-working-html_23-2150040431.jpg?ga=GA1.1.1767342982.1726574862&semt=ais_hybrid" alt="Sponsor 2" className="sliding-image" />
+  <img src="https://img.freepik.com/free-photo/programming-background-with-person-working-with-codes-computer_23-2150010119.jpg?ga=GA1.1.1767342982.1726574862&semt=ais_hybrid" alt="Sponsor 2" className="sliding-image" />
   <img src="https://img.freepik.com/free-photo/programming-background-concept_23-2150170126.jpg?ga=GA1.1.1767342982.1726574862&semt=ais_hybrid" alt="Sponsor 2" className="sliding-image" />
     </div>
   </div>

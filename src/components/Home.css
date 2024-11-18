@@ -513,7 +513,7 @@ br
 .sliding-images-section {
   text-align: center;
   padding: 20px 0;
-  background-color: #221c1c;
+ 
 
 }
 
@@ -555,7 +555,7 @@ br
 /* Keyframes for left to right sliding */
 @keyframes slide-left-to-right {
   0% {
-    transform: translateX(-100%); /* Start at the left edge */
+    transform: translateX(-380%); /* Start at the left edge */
   }
   100% {
     transform: translateX(0%); /* Move right by 100% of the container width */
@@ -568,7 +568,7 @@ br
     transform: translateX(0%); /* Start at the right edge */
   }
   100% {
-    transform: translateX(-100%); /* Move left by 100% of the container width */
+    transform: translateX(-380%); /* Move left by 100% of the container width */
   }
 }
 
