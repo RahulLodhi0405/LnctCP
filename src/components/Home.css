@@ -513,6 +513,7 @@ br
 .sliding-images-section {
   text-align: center;
   padding: 20px 0;
+  background-color: #221c1c;
 
 }
 
@@ -532,13 +533,13 @@ br
 /* Sliding image container for the left-to-right sliding */
 .image-container-left-to-right {
   display: flex;
-  animation: slide-left-to-right 25s linear infinite; /* Left to right sliding animation */
+  animation: slide-left-to-right 21s linear infinite; /* Left to right sliding animation */
 }
 
 /* Sliding image container for the right-to-left sliding */
 .image-container-right-to-left {
   display: flex;
-  animation: slide-right-to-left 25s linear infinite; /* Right to left sliding animation */
+  animation: slide-right-to-left 21s linear infinite; /* Right to left sliding animation */
   margin-top: 10px; /* Add space between the two sliders */
 }
 
