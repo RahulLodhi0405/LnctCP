@@ -1,14 +1,11 @@
 import React, { useState } from 'react';
-import { Link, useLocation } from 'react-router-dom'; 
+import { NavLink } from 'react-router-dom';  // Use NavLink instead of Link
 import './Navbar.css';
-import collegeLogo from '../Assets/CollegeLogo.png'; 
+import collegeLogo from '../Assets/CollegeLogo.png';
 import 'font-awesome/css/font-awesome.min.css';
 
 const Navbar = () => {
   const [isMobile, setIsMobile] = useState(false);
-  const location = useLocation();
-
-  const isActive = (path) => location.pathname === path;
 
   return (
     <nav className="navbar">
@@ -17,42 +14,90 @@ const Navbar = () => {
           <img src={collegeLogo} alt="College Logo" className="college-logo" />
         </a>
       </div>
-      <ul
-        className={isMobile ? "navbar-links-mobile" : "navbar-links"}
-        onClick={() => setIsMobile(false)}
-      >
+      <ul className={isMobile ? "navbar-links-mobile" : "navbar-links"} onClick={() => setIsMobile(false)}>
         <li>
-          <Link to="/" className={isActive("/") ? "active" : ""}>Home</Link>
+          <NavLink
+            to="/"
+            className={({ isActive }) => 
+              `navbar-link ${isActive ? "active" : ""}`
+            }
+          >
+            Home
+          </NavLink>
         </li>
         <li>
-          <Link to="/events" className={isActive("/events") ? "active" : ""}>Events</Link>
+          <NavLink
+            to="/events"
+            className={({ isActive }) => 
+              `navbar-link ${isActive ? "active" : ""}`
+            }
+          >
+            Events
+          </NavLink>
         </li>
         <li>
-          <Link to="/resources" className={isActive("/resources") ? "active" : ""}>Resources</Link>
+          <NavLink
+            to="/resources"
+            className={({ isActive }) => 
+              `navbar-link ${isActive ? "active" : ""}`
+            }
+          >
+            Resources
+          </NavLink>
         </li>
         <li>
-          <Link to="/blog" className={isActive("/blog") ? "active" : ""}>Blog</Link>
+          <NavLink
+            to="/blog"
+            className={({ isActive }) => 
+              `navbar-link ${isActive ? "active" : ""}`
+            }
+          >
+            Blog
+          </NavLink>
         </li>
         <li>
-          <Link to="/gallery" className={isActive("/gallery") ? "active" : ""}>Gallery</Link>
+          <NavLink
+            to="/gallery"
+            className={({ isActive }) => 
+              `navbar-link ${isActive ? "active" : ""}`
+            }
+          >
+            Gallery
+          </NavLink>
         </li>
         <li>
-          <Link to="/contact" className={isActive("/contact") ? "active" : ""}>Contact</Link>
+          <NavLink
+            to="/contact"
+            className={({ isActive }) => 
+              `navbar-link ${isActive ? "active" : ""}`
+            }
+          >
+            Contact
+          </NavLink>
         </li>
         <li>
-          <Link to="/opportunities" className={isActive("/opportunities") ? "active" : ""}>Opportunities</Link>
+          <NavLink
+            to="/opportunities"
+            className={({ isActive }) => 
+              `navbar-link ${isActive ? "active" : ""}`
+            }
+          >
+            Opportunities
+          </NavLink>
         </li>
         <li>
-          <Link to="/discussion" className={isActive("/discussion") ? "active" : ""}>Discussion</Link>
+          <NavLink
+            to="/discussion"
+            className={({ isActive }) => 
+              `navbar-link ${isActive ? "active" : ""}`
+            }
+          >
+            Discussion
+          </NavLink>
         </li>
-        <li>
-          <button>Login</button>
-        </li>
+        <li><button>Login</button></li>
       </ul>
-      <button
-        className="mobile-menu-icon"
-        onClick={() => setIsMobile(!isMobile)}
-      >
+      <button className="mobile-menu-icon" onClick={() => setIsMobile(!isMobile)}>
         {isMobile ? <i className="fas fa-times"></i> : <i className="fas fa-bars"></i>}
       </button>
     </nav>
