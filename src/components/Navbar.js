@@ -1,14 +1,19 @@
 import React, { useState } from 'react';
-import { Link, useLocation } from 'react-router-dom'; 
+import { Link, useNavigate, useLocation } from 'react-router-dom';
 import './Navbar.css';
-import collegeLogo from '../Assets/CollegeLogo.png'; 
+import collegeLogo from '../Assets/CollegeLogo.png';
 import 'font-awesome/css/font-awesome.min.css';
 
 const Navbar = () => {
   const [isMobile, setIsMobile] = useState(false);
   const location = useLocation();
+  const navigate = useNavigate(); // To programmatically navigate
 
   const isActive = (path) => location.pathname === path;
+
+  const handleLoginClick = () => {
+    navigate("/login"); // Navigate to the login page
+  };
 
   return (
     <nav className="navbar">
@@ -46,7 +51,12 @@ const Navbar = () => {
           <Link to="/discussion" className={isActive("/discussion") ? "active" : ""}>Discussion</Link>
         </li>
         <li>
-          <button>Login</button>
+          <button
+            className={isActive("/login") ? "active" : ""}
+            onClick={handleLoginClick}
+          >
+            Login
+          </button>
         </li>
       </ul>
       <button
