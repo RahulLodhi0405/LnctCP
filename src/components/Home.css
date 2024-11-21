@@ -493,6 +493,14 @@ br
  padding: 10px;
 
 }
+
+.coordinators-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 50px;
+}
+
 .coordinator img {
   width: 180px;
   height: 180px;

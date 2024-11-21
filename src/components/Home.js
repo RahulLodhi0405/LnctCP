@@ -8,6 +8,7 @@ import Priyanshu from '../Assets/Priyanshu.png';
 import Adarshsir from '../Assets/Adarshsir.png';
 import about from '../Assets/about.png';
 import Adarsh from '../Assets/Adarsh.png';
+import shreyansh from '../Assets/shreyansh.png';
 
 const Home = () => {
   return (
@@ -199,8 +200,29 @@ const Home = () => {
   </div>
 </section>
 <br></br> <br></br><br></br><br></br>
+<div className="coordinators-grid">
+  <div className="coordinator">
+    <img src={shreyansh} alt="Coordinator1" />
+    <h3>Tech </h3>
+    <p>Shreyansh Pandit</p>
+    <div className="social-media">
+    <a href="https://www.linkedin.com/in/shreyansh-pandit-1b47b2203/" target="_blank" rel="noopener noreferrer">
+          <FaLinkedin className="social-icon" /></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="https://twitter.com/Shreyanshloop07" target="_blank" rel="noopener noreferrer">
+          <FaTwitter className="social-icon" />
+           </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="https://github.com/shreyansh-Geek" target="_blank" rel="noopener noreferrer">
+          <FaGithub className="social-icon" /> 
+          </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+          <FaInstagram className="social-icon" />
+        </a> 
+    </div>
+    </div>
+
+
 <div className="coordinator">
-    <img src={Adarsh} alt="Coordinator" />
+    <img src={Adarsh} alt="Coordinator2" />
     <h3>Creative Head</h3>
     <p>Adarsh Gupta</p>
     <div className="social-media">
@@ -217,6 +239,13 @@ const Home = () => {
         </a> 
     </div>
     </div>
+
+
+</div>
+
+    
+
+
 
 
       <section className="contact-section">
