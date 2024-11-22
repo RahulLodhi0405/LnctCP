@@ -203,7 +203,7 @@ const Home = () => {
 <div className="coordinators-grid">
   <div className="coordinator">
     <img src={shreyansh} alt="Coordinator1" />
-    <h3>Tech </h3>
+    <h3>Development Lead</h3>
     <p>Shreyansh Pandit</p>
     <div className="social-media">
     <a href="https://www.linkedin.com/in/shreyansh-pandit-1b47b2203/" target="_blank" rel="noopener noreferrer">
