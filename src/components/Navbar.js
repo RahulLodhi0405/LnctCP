@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import { NavLink } from 'react-router-dom';  // Use NavLink instead of Link
-import { Link, useNavigate, useLocation } from 'react-router-dom';
+import { NavLink, useNavigate, useLocation } from 'react-router-dom';
 import './Navbar.css';
 import collegeLogo from '../Assets/CollegeLogo.png';
 import 'font-awesome/css/font-awesome.min.css';
@@ -8,13 +7,9 @@ import 'font-awesome/css/font-awesome.min.css';
 const Navbar = () => {
   const [isMobile, setIsMobile] = useState(false);
   const location = useLocation();
-  const navigate = useNavigate(); // To programmatically navigate
+  const navigate = useNavigate();
 
   const isActive = (path) => location.pathname === path;
-
-  const handleLoginClick = () => {
-    navigate("/login"); // Navigate to the login page
-  };
 
   return (
     <nav className="navbar">
@@ -23,12 +18,15 @@ const Navbar = () => {
           <img src={collegeLogo} alt="College Logo" className="college-logo" />
         </a>
       </div>
-      <ul className={isMobile ? "navbar-links-mobile" : "navbar-links"} onClick={() => setIsMobile(false)}>
+      <ul
+        className={isMobile ? 'navbar-links-mobile' : 'navbar-links'}
+        onClick={() => setIsMobile(false)}
+      >
         <li>
           <NavLink
             to="/"
-            className={({ isActive }) => 
-              `navbar-link ${isActive ? "active" : ""}`
+            className={({ isActive }) =>
+              `navbar-link ${isActive ? 'active' : ''}`
             }
           >
             Home
@@ -37,8 +35,8 @@ const Navbar = () => {
         <li>
           <NavLink
             to="/events"
-            className={({ isActive }) => 
-              `navbar-link ${isActive ? "active" : ""}`
+            className={({ isActive }) =>
+              `navbar-link ${isActive ? 'active' : ''}`
             }
           >
             Events
@@ -47,8 +45,8 @@ const Navbar = () => {
         <li>
           <NavLink
             to="/resources"
-            className={({ isActive }) => 
-              `navbar-link ${isActive ? "active" : ""}`
+            className={({ isActive }) =>
+              `navbar-link ${isActive ? 'active' : ''}`
             }
           >
             Resources
@@ -57,8 +55,8 @@ const Navbar = () => {
         <li>
           <NavLink
             to="/blog"
-            className={({ isActive }) => 
-              `navbar-link ${isActive ? "active" : ""}`
+            className={({ isActive }) =>
+              `navbar-link ${isActive ? 'active' : ''}`
             }
           >
             Blog
@@ -67,8 +65,8 @@ const Navbar = () => {
         <li>
           <NavLink
             to="/gallery"
-            className={({ isActive }) => 
-              `navbar-link ${isActive ? "active" : ""}`
+            className={({ isActive }) =>
+              `navbar-link ${isActive ? 'active' : ''}`
             }
           >
             Gallery
@@ -77,8 +75,8 @@ const Navbar = () => {
         <li>
           <NavLink
             to="/contact"
-            className={({ isActive }) => 
-              `navbar-link ${isActive ? "active" : ""}`
+            className={({ isActive }) =>
+              `navbar-link ${isActive ? 'active' : ''}`
             }
           >
             Contact
@@ -87,8 +85,8 @@ const Navbar = () => {
         <li>
           <NavLink
             to="/opportunities"
-            className={({ isActive }) => 
-              `navbar-link ${isActive ? "active" : ""}`
+            className={({ isActive }) =>
+              `navbar-link ${isActive ? 'active' : ''}`
             }
           >
             Opportunities
@@ -97,23 +95,28 @@ const Navbar = () => {
         <li>
           <NavLink
             to="/discussion"
-            className={({ isActive }) => 
-              `navbar-link ${isActive ? "active" : ""}`
+            className={({ isActive }) =>
+              `navbar-link ${isActive ? 'active' : ''}`
             }
           >
             Discussion
           </NavLink>
         </li>
         <li>
-          <button
-            className={isActive("/login") ? "active" : ""}
-            onClick={handleLoginClick}
+          <NavLink
+            to="/login"
+            className={({ isActive }) =>
+              `navbar-link button-link ${isActive ? 'active' : ''}`
+            }
           >
             Login
-          </button>
+          </NavLink>
         </li>
       </ul>
-      <button className="mobile-menu-icon" onClick={() => setIsMobile(!isMobile)}>
+      <button
+        className="mobile-menu-icon"
+        onClick={() => setIsMobile(!isMobile)}
+      >
         {isMobile ? <i className="fas fa-times"></i> : <i className="fas fa-bars"></i>}
       </button>
     </nav>

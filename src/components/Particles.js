@@ -8,7 +8,7 @@ const ParticlesComponent = (props) => {
   const options = useMemo(() => {
     return {
       background: {
-        color: "#000", // Dark background for contrast
+        color:"#000", // Dark background for contrast
       },
       fullScreen: {
         enable: true, // Fullscreen canvas
@@ -50,7 +50,7 @@ const ParticlesComponent = (props) => {
           value: { min: 0.3, max: 0.7 }, // Opacity range remains the same
         },
         size: {
-          value: { min: 1, max: 3 }, // Particle size remains the same
+          value: { min: 3, max: 6 }, // Particle size remains the same
         },
       },
     };

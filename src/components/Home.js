@@ -8,6 +8,7 @@ import Priyanshu from '../Assets/Priyanshu.png';
 import Adarshsir from '../Assets/Adarshsir.png';
 import about from '../Assets/about.png';
 import Adarsh from '../Assets/Adarsh.png';
+import Marketinghead from '../Assets/Marketinghead.png';
 
 const Home = () => {
   return (
@@ -203,6 +204,24 @@ const Home = () => {
     <img src={Adarsh} alt="Coordinator" />
     <h3>Creative Head</h3>
     <p>Adarsh Gupta</p>
+    <div className="social-media">
+    <a href="https://www.linkedin.com/in/idealgupta/" target="_blank" rel="noopener noreferrer">
+          <FaLinkedin className="social-icon" /></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
+          <FaTwitter className="social-icon" />
+           </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="https://github.com" target="_blank" rel="noopener noreferrer">
+          <FaGithub className="social-icon" /> 
+          </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+          <FaInstagram className="social-icon" />
+        </a> 
+    </div>
+    </div>
+    <div className="coordinator">
+    <img src={Marketinghead} alt="Coordinator" />
+    <h3>Marketing Manager</h3>
+    <p>Prathmesh Sharma</p>
     <div className="social-media">
     <a href="https://www.linkedin.com/in/idealgupta/" target="_blank" rel="noopener noreferrer">
           <FaLinkedin className="social-icon" /></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
