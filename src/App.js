@@ -10,7 +10,7 @@ import Resources from './components/Resources/Resource';
 import Blog from './components/Blog/Blog';
 import Contact from './components/contact/Contact';
 import Opportunities from './components/Opportunities/Opportunities';
-import Login from './components/Login/Login';
+import LoginPage from './components/Login/Login';
 function App() {
   return (
     <Router>
@@ -28,9 +28,9 @@ function App() {
           <Route path="/blog" element={<Blog />} /> 
           <Route path="/contact" element={<Contact/>} /> 
           <Route path="/opportunities" element={<Opportunities/>} /> 
-          <Route path="/login" element={<Login/>} /> 
+          <Route path="/login" element={<LoginPage/>} /> 
         </Routes>
-      </div>
+      </div> 
     </Router>
   );
 }
