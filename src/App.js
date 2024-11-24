@@ -11,6 +11,7 @@ import Blog from './components/Blog/Blog';
 import Contact from './components/contact/Contact';
 import Opportunities from './components/Opportunities/Opportunities';
 import LoginPage from './components/Login/Login';
+import SignUpPage from './components/SignUp/Signup';
 function App() {
   return (
     <Router>
@@ -28,7 +29,8 @@ function App() {
           <Route path="/blog" element={<Blog />} /> 
           <Route path="/contact" element={<Contact/>} /> 
           <Route path="/opportunities" element={<Opportunities/>} /> 
-          <Route path="/login" element={<LoginPage/>} /> 
+          <Route path="/login" element={<LoginPage/>} />
+          <Route path="/signup" element={<SignUpPage/>} />  
         </Routes>
       </div> 
     </Router>
