@@ -1,20 +1,13 @@
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';  // Use NavLink instead of Link
-import { Link, useNavigate, useLocation } from 'react-router-dom';
-import './Navbar.css';
+import '../NavBar/Navbar.css';
 import collegeLogo from '../../Assets/CollegeLogo.png';
 import 'font-awesome/css/font-awesome.min.css';
+import { useNavigate } from 'react-router-dom';
 
 const Navbar = () => {
   const [isMobile, setIsMobile] = useState(false);
-  const location = useLocation();
-  const navigate = useNavigate(); // To programmatically navigate
-
-  const isActive = (path) => location.pathname === path;
-
-  const handleLoginClick = () => {
-    navigate("/login"); // Navigate to the login page
-  };
+  const Navigate = useNavigate();
 
   return (
     <nav className="navbar">
@@ -104,14 +97,8 @@ const Navbar = () => {
             Discussion
           </NavLink>
         </li>
-        <li>
-          <button
-            className={isActive("/login") ? "active" : ""}
-            onClick={handleLoginClick}
-          >
-            Login
-          </button>
-        </li>
+        <li><button className='navbar-login-button'
+        onClick={() => Navigate("/login")}>Login</button></li>
       </ul>
       <button className="mobile-menu-icon" onClick={() => setIsMobile(!isMobile)}>
         {isMobile ? <i className="fas fa-times"></i> : <i className="fas fa-bars"></i>}
