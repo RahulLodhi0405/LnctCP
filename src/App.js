@@ -12,6 +12,8 @@ import Contact from './components/contact/Contact';
 import Opportunities from './components/Opportunities/Opportunities';
 import LoginPage from './components/Login/Login';
 import SignUpPage from './components/SignUp/Signup';
+import Profile from './components/Profile/profile';
+import { ToastContainer } from 'react-toastify';
 function App() {
   return (
     <Router>
@@ -31,7 +33,9 @@ function App() {
           <Route path="/opportunities" element={<Opportunities/>} /> 
           <Route path="/login" element={<LoginPage/>} />
           <Route path="/signup" element={<SignUpPage/>} />  
+          <Route path="/profile" element={<Profile />} />
         </Routes>
+        <ToastContainer />
       </div> 
     </Router>
   );

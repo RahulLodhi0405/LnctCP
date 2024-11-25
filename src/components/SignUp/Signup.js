@@ -1,7 +1,12 @@
+import "react-toastify/dist/ReactToastify.css";
 import React, { useState } from "react";
 import "../SignUp/Signup.css";
 import Logo from "../../Assets/Logo.png"; // Path to your app logo
 import { useNavigate } from "react-router-dom";
+import {Auth, db} from "../Firebase/Firebase"
+import {createUserWithEmailAndPassword} from "firebase/auth"
+import { doc, setDoc } from "firebase/firestore";
+import { toast } from "react-toastify";
 
 const SignUpPage = () => {
   const [userType, setUserType] = useState("member");
@@ -18,14 +23,45 @@ const SignUpPage = () => {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData((prev) => ({ ...prev, [name]: value }));
+    setFormData((prev) => ({ ...prev, [name]: value })); // Correctly updates formData state
   };
-
-  const handleSignUpSubmit = (e) => {
+  
+  const handleSignUpSubmit = async (e) => {
     e.preventDefault();
-    console.log("SignUp Details:", { ...formData, userType });
-    // Add sign-up logic here
+  
+    const { email, password, confirmPassword, name, phone, college } = formData; // Destructuring email, password, and confirmPassword from formData
+  
+    if (password !== confirmPassword) {
+      console.error("Passwords do not match.");
+      return;
+    }
+  
+    try {
+      const userCredential = await createUserWithEmailAndPassword(Auth, email, password);
+      const user = userCredential.user; 
+      if (user) {
+        await setDoc(doc(db, "users", user.uid), {
+          Name: name,
+          Email: email,
+          Phone: phone,
+          College: college,
+          UserType: userType,
+          UID: user.uid, // Including UID for reference
+        })
+      }
+      toast.success("User Registered Successfully!",{
+        className: "signup-custom-toast",
+        position: "bottom-right",
+      });
+      navigate("/login");
+    } catch (error) {
+      toast.error(`Error: ${error.message}`, {
+        position: "bottom-right",
+      });
+      console.error("Error during sign up:", error.message); 
+    }
   };
+  
 
   const handleLoginClick = () => {
     navigate("/login"); // Navigate to Login page
