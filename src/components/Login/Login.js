@@ -3,17 +3,32 @@ import "./Login.css";
 import Logo from "../../Assets/Logo.png"; // Path to your app logo
 import '@fortawesome/fontawesome-free/css/all.css';
 import { useNavigate } from "react-router-dom";
+import { signInWithEmailAndPassword } from "firebase/auth";
+import { Auth } from "../Firebase/Firebase";
+import { toast } from "react-toastify";
+
 
 const LoginPage = () => {
   const [loginType, setLoginType] = useState("member");
-  const [username, setUsername] = useState("");
+  const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
 
-  const handleLoginSubmit = (e) => {
+  const handleLoginSubmit = async (e) => {
     e.preventDefault();
-    console.log("Login Details:", { username, password, loginType });
     // Add login logic here
+    try {
+      await signInWithEmailAndPassword(Auth, email, password);
+      navigate("/profile");
+      toast.success("User loggedIn successfully!",{
+        className: "login-custom-toast",
+        position: "bottom-right",
+      })
+    } catch (error) {
+      toast.error(`Error: ${error.message}`, {
+        position: "bottom-right",
+      });
+    }
   };
   const handleSignupClick = () => {
     navigate("/signup"); // Navigate to the SignUp page
@@ -55,8 +70,8 @@ const LoginPage = () => {
                 type="text"
                 placeholder="Username or Email"
                 className="input-field"
-                value={username}
-                onChange={(e) => setUsername(e.target.value)}
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
               />
 
         <label htmlFor="password"></label>
