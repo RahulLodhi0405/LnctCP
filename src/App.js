@@ -13,10 +13,13 @@ import Opportunities from './components/Opportunities/Opportunities';
 import LoginPage from './components/Login/Login';
 import SignUpPage from './components/SignUp/Signup';
 import Profile from './components/Profile/profile';
+import DiscussionPage from './components/Discussion/Discussion';
 import { ToastContainer } from 'react-toastify';
+import {AuthProvider} from './Context/AuthContext';
 function App() {
   return (
-    <Router>
+    <AuthProvider>
+      <Router>
       <div className="App">
         <header className="App-header"></header>
         <Navbar />
@@ -34,10 +37,12 @@ function App() {
           <Route path="/login" element={<LoginPage/>} />
           <Route path="/signup" element={<SignUpPage/>} />  
           <Route path="/profile" element={<Profile />} />
+          <Route path="/discussion" element={<DiscussionPage />} />
         </Routes>
         <ToastContainer />
       </div> 
     </Router>
+    </AuthProvider>
   );
 }
 

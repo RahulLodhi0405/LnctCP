@@ -4,6 +4,7 @@ import { doc, getDoc } from "firebase/firestore";
 import { useNavigate } from "react-router-dom";
 import "./profile.css";
 import { toast } from "react-toastify";
+import DiamondHead from "../../Assets/DiamondHead.jpg"
 
 
 function Profile() {
@@ -47,6 +48,12 @@ function Profile() {
     <div className="profile-page"> 
         {userDetails ? (
         <div className="profile-container">
+          <img
+              src={DiamondHead}// Default image if no photoURL
+              alt="Profile"
+              className="profile-image"
+              onClick={() => navigate("/profile")} // Navigate to Profile on click
+            />
           <h3 className="welcome-message">
             Welcome, {userDetails.Name}! 🙏
           </h3>
