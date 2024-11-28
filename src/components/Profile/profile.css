@@ -64,3 +64,12 @@
     color: #bbbbbb; /* Neutral light gray */
   }
   
+  .profile-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    cursor: pointer;
+    object-fit: cover;
+    border: 2px solid #ccc;
+  }
+  
