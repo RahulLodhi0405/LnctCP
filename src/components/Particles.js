@@ -8,7 +8,7 @@ const ParticlesComponent = (props) => {
   const options = useMemo(() => {
     return {
       background: {
-        color:"#000", // Dark background for contrast
+        color:"#0000", // Dark background for contrast
       },
       fullScreen: {
         enable: true, // Fullscreen canvas
