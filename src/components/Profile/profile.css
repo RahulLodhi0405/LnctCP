@@ -1,0 +1,75 @@
+/* Center the card on the page */
+.profile-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Orbitron', sans-serif;
+  }
+  
+  /* Card styling */
+  .profile-card {
+    height: 400px;
+    width: 350px;
+    background-color: rgba(50, 50, 50, 0.9); /* Dark translucent background */
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.8); /* Subtle dark shadow */
+    padding: 30px 35px;
+    text-align: center;
+    color: #f0f0f0; /* Light text color */
+  }
+  
+  /* Welcome message styling */
+  .welcome-message {
+    font-size: 22px;
+    margin-bottom: 20px;
+    color: #e0e0e0; /* Slightly lighter text */
+  }
+  
+  /* Profile details */
+  .profile-details p {
+    margin: 10px 0;
+    font-size: 16px;
+    color: #d3d3d3; /* Muted light text */
+  }
+  
+  .profile-details span {
+    font-weight: bold;
+    color: #ffffff; /* Bright white text for emphasis */
+  }
+  
+  /* Logout button */
+  .profile-logout-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #1e90ff; /* Vibrant blue button */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .profile-logout-button:hover {
+    background-color: #1c7ed6;
+    transform: scale(1.05); /* Slight scaling effect on hover */
+  }
+  
+  /* Loading message */
+  .loading-message {
+    font-size: 18px;
+    color: #bbbbbb; /* Neutral light gray */
+  }
+  
+  .profile-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    cursor: pointer;
+    object-fit: cover;
+    border: 2px solid #ccc;
+  }
+  

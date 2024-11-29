@@ -45,27 +45,17 @@ nav {
   font-weight: bold;
   letter-spacing: 3px;
   text-transform: uppercase;
-  /*text-shadow: 0 0 8px rgba(15, 102, 102, 0.6);*/
 }
 
 .navbar-logo img {
   height: 50px;
   margin-right: 15px;
-  animation: logoGlow 1.5s infinite alternate;
 }
-/*
-@keyframes logoGlow {
-  0% {
-    box-shadow: 0 0 20px rgba(2, 21, 21, 0.9), 0 0 40px rgba(0, 255, 255, 0.6);
-  }
-  100% {
-    box-shadow: 0 0 40px rgba(1, 7, 7, 0.9), 0 0 60px rgba(0, 255, 255, 0.6);
-  }
-}
-*/
+
 .navbar-links {
   display: flex;
   gap: 30px;
+  margin-top: -5px;
 }
 
 .navbar-links li {
@@ -73,7 +63,7 @@ nav {
 }
 
 .navbar-links a {
-  font-family:serif;
+  font-family: serif;
   color: #f1f1f1;
   text-decoration: none;
   font-size: 18px;
@@ -100,14 +90,14 @@ nav {
   left: 0;
   width: 100%;
   height: 100%;
-  /*background: rgba(0, 255, 255, 0.2);*/
   transition: all 0.4s;
   border-radius: 5px;
   z-index: -1;
   margin-top: auto;
 }
 
-.navbar-links li button {
+/* Navbar Login Button */
+.navbar-links li .navbar-login-button {
   background-color: transparent;
   border: 2px solid #00ffcc; /* Futuristic neon border */
   color: #00ffcc;
@@ -119,9 +109,10 @@ nav {
   z-index: 1;
   transition: all 0.4s ease;
   overflow: hidden;
+  margin-top: 0px;
 }
 
-.navbar-links li button::before {
+.navbar-links li .navbar-login-button::before {
   content: "";
   position: absolute;
   top: 0;
@@ -133,25 +124,42 @@ nav {
   z-index: -1;
 }
 
-.navbar-links li button:hover::before {
+.navbar-links li .navbar-login-button:hover::before {
   left: 100%;
 }
 
-.navbar-links li button:hover {
+.navbar-links li .navbar-login-button:hover {
   color: #fff;
   border-color: #fff;
 }
 
-.navbar-links li button:focus {
+.navbar-links li .navbar-login-button:focus {
   outline: none;
 }
 
-.navbar-links li button:active {
+/* Prevent global styles from overriding navbar button */
+.navbar .navbar-login-button {
+  all: unset; /* Prevents inheritance of unwanted styles */
+  display: inline-block;
+  background: transparent;
+  color: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: 2px solid #00ffcc;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+  transition: background-color 0.3s ease;
+}
+
+.navbar-links li .navbar-login-button:active {
   transform: scale(0.95);
 }
 
 /* Additional futuristic glow effect */
-.navbar-links li button::after {
+.navbar-links li .navbar-login-button::after {
   content: "";
   position: absolute;
   top: -5px;
@@ -165,14 +173,8 @@ nav {
   transition: opacity 0.4s ease;
 }
 
-.navbar-links li button:hover::after {
+.navbar-links li .navbar-login-button:hover::after {
   opacity: 1;
-}
-
-.navbar-links a:hover::before {
-  width: 0%;
-  height: 0%;
-  transform: scale(5);
 }
 
 /* Mobile Menu Icon */
@@ -192,12 +194,12 @@ nav {
 
 /* Mobile Menu */
 .navbar-links-mobile {
-  display:table-column;
+  display: table-column;
   background: rgb(0, 0, 0);
   z-index:-1;
   position: fixed;
   top: 70px;
-  right:400px;
+  right: 400px;
   opacity: 1;
   padding: 0px 20px;
   text-align: left;
@@ -247,12 +249,12 @@ nav {
   }
 }
 
-.navbar-links-mobile button {
-  background-color:rgb(96, 43, 10);
-  border: 2px solid #00ffcc; /* Futuristic neon border */
+/* Login button for mobile navbar */
+.navbar-links-mobile .navbar-login-button {
+  background-color: rgb(96, 43, 10);
+  border: 2px solid #00ffcc;
   color: #00ffcc;
   font-size: 1rem;
-  
   border-radius: 10px;
   cursor: pointer;
   position: relative;
@@ -263,7 +265,7 @@ nav {
   margin-left: 40px;
 }
 
-.navbar-links-mobile li button::before {
+.navbar-links-mobile .navbar-login-button::before {
   content: "";
   position: absolute;
   top: 0;
@@ -275,38 +277,33 @@ nav {
   z-index: -1;
 }
 
-.navbar-links-mobile li button:hover::before {
+.navbar-links-mobile .navbar-login-button:hover::before {
   left: 100%;
 }
 
-.navbar-links-mobile li button:hover {
+.navbar-links-mobile .navbar-login-button:hover {
   color: #fff;
   border-color: #fff;
 }
 
-.navbar-links-mobile li button:focus {
+.navbar-links-mobile .navbar-login-button:focus {
   outline: none;
 }
 
-.navbar-links-mobile li button:active {
+.navbar-links-mobile .navbar-login-button:active {
   transform: scale(0.95);
 }
 
-
+/* Active link styles */
 .navbar-links a.active,
-
 .navbar-links-mobile a.active {
-
   color: #0ff; /* Highlighted color */
-
   text-shadow: 0 0 10px rgba(0, 255, 255, 1), 0 0 20px rgba(0, 255, 255, 0.8);
-
   transform: translateY(-2px);
-
 }
 
 /* Additional futuristic glow effect */
-.navbar-links-mobile li button::after {
+.navbar-links-mobile .navbar-login-button::after {
   content: "";
   position: absolute;
   top: -5px;
@@ -320,6 +317,21 @@ nav {
   transition: opacity 0.4s ease;
 }
 
-.navbar-links-mobile li button:hover::after {
+.navbar-links-mobile .navbar-login-button:hover::after {
   opacity: 1;
+}
+
+.profile-picture {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  object-fit: cover;
+  border: 2px solid #ccc;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; 
+}
+
+.profile-picture:hover {
+  transform: rotateY(15deg) scale(1.2); 
+  box-shadow: 0 0 20px rgba(58, 187, 134, 0.8); 
 }

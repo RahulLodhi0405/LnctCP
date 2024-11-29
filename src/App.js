@@ -10,10 +10,16 @@ import Resources from './components/Resources/Resource';
 import Blog from './components/Blog/Blog';
 import Contact from './components/contact/Contact';
 import Opportunities from './components/Opportunities/Opportunities';
-import Login from './components/Login/Login';
+import LoginPage from './components/Login/Login';
+import SignUpPage from './components/SignUp/Signup';
+import Profile from './components/Profile/profile';
+import DiscussionPage from './components/Discussion/Discussion';
+import { ToastContainer } from 'react-toastify';
+import {AuthProvider} from './Context/AuthContext';
 function App() {
   return (
-    <Router>
+    <AuthProvider>
+      <Router>
       <div className="App">
         <header className="App-header"></header>
         <Navbar />
@@ -28,10 +34,15 @@ function App() {
           <Route path="/blog" element={<Blog />} /> 
           <Route path="/contact" element={<Contact/>} /> 
           <Route path="/opportunities" element={<Opportunities/>} /> 
-          <Route path="/login" element={<Login/>} /> 
+          <Route path="/login" element={<LoginPage/>} />
+          <Route path="/signup" element={<SignUpPage/>} />  
+          <Route path="/profile" element={<Profile />} />
+          <Route path="/discussion" element={<DiscussionPage />} />
         </Routes>
-      </div>
+        <ToastContainer />
+      </div> 
     </Router>
+    </AuthProvider>
   );
 }
 
