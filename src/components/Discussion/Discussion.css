@@ -1,0 +1,203 @@
+
+.discussion-page {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  background-color: transparent;
+  min-height: 100vh;
+}
+
+.discussion-page h1 {
+  text-align: center;
+  color: #00d4ff;
+  text-shadow: 0 0 10px #00d4ff;
+  margin-bottom: 30px;
+  margin-top: 50px;
+}
+
+.discussion-page .new-post, 
+.discussion-page .add-reply {
+  width: 60%;
+  margin: 50px auto; 
+  background-color: rgba(255, 255, 255, 0.17);
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease-in-out; 
+}
+
+/* Search Bar */
+.search-bar-threads {
+  display: flex;
+  justify-content: center;  
+  align-items: center;      
+  margin-bottom: 30px;
+  width: 100%;              
+  height: 100%;             
+}
+
+.search-bar-threads input {
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 10px;
+  border: none;
+  width: 80%;
+  max-width: 400px;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+  box-shadow: 0 0 5px #00d4ff;
+  outline: none;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.search-bar-threads input:focus {
+  background-color: rgba(202, 214, 216, 0.2);
+}
+
+
+.discussion-page .add-reply {
+  width: 60% !important;
+  margin: 50px auto !important;
+  background-color: rgba(255, 255, 255, 0.17) !important;
+  padding: 15px !important;
+  border: 1px solid #ddd !important;
+  border-radius: 8px !important;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1) !important;
+  transition: box-shadow 0.3s ease-in-out !important;
+}
+
+
+.discussion-page .new-post:hover, 
+.discussion-page .add-reply:hover {
+  box-shadow: 0 0 10px #00d4ff, 0 0 10px #00d4ff;
+}
+
+.discussion-page .new-post:focus-within, 
+.discussion-page .add-reply:focus-within {
+  box-shadow: 0 0 10px #00d4ff, 0 0 10px #00d4ff;
+}
+
+.discussion-page .post .post-description {
+  color: #fff;
+  font-weight: 500;
+  text-align: left;
+}
+
+
+.discussion-page .new-post input, .discussion-page .add-reply input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  color: #fff;
+}
+
+.discussion-page post-button {
+  padding: 10px 15px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.discussion-page post-button:hover {
+  background-color: #0056b3;
+}
+
+.discussion-page .posts {
+  margin: 20px auto;
+  height: auto;
+  width: 60%;
+}
+
+.discussion-page .post {
+  border: 1px solid #ddd;
+  background-color: rgba(255, 255, 255, 0.17);
+  margin-bottom: 20px;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.discussion-page .post h2 {
+  font-size: 26px;
+  color: #ffffff;
+  text-align: left;
+}
+
+.discussion-page .post p {
+  color: #555;
+  margin: 10px 0;
+}
+
+.discussion-page .post p:last-child {
+  font-size: 14px;
+  color: #888;
+}
+
+.discussion-page .reply {
+  margin-left: 50px;
+  margin-top: 10px;
+  border-left: 10px double #00d4ff;
+  padding-left: 15px;
+  border-radius: 5px;
+  background-color: #ffffffec;
+  padding: 10px;
+}
+
+.discussion-page .reply p {
+  margin: 5px 0;
+}
+
+.discussion-page .reply p:last-child {
+  font-size: 14px;
+  color: #888;
+}
+
+.discussion-page .add-reply {
+  margin-top: 10px;
+  background-color: #f9f9f9;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.discussion-page .add-reply input {
+  font-size: 14px;
+}
+
+.discussion-page .loading {
+  text-align: center;
+  font-size: 18px;
+  color: #666;
+  margin-top: 50px;
+}
+
+textarea {
+  height: 150px;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.044);
+  padding: 15px;
+  padding-left: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  font-size: 16px;
+  color: #fff;
+  font-family: Arial, sans-serif;
+}
+
+.reply {
+  height: auto;
+  width: 70%;
+  text-align: left;
+}
+
+
+.discussion-page .reply .reply-content {
+  color: #000 ;
+}
