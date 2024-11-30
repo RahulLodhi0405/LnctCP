@@ -7,6 +7,7 @@ import {Auth, db} from "../Firebase/Firebase"
 import {createUserWithEmailAndPassword} from "firebase/auth"
 import { doc, setDoc } from "firebase/firestore";
 import { toast } from "react-toastify";
+import { updateProfile } from "firebase/auth";
 
 const SignUpPage = () => {
   const [userType, setUserType] = useState("member");
@@ -39,6 +40,12 @@ const SignUpPage = () => {
     try {
       const userCredential = await createUserWithEmailAndPassword(Auth, email, password);
       const user = userCredential.user; 
+      // Set displayName using updateProfile
+      await updateProfile(user, {
+        displayName: name, // Set the display name here
+      });
+
+      // Store user data in Firestore
       if (user) {
         await setDoc(doc(db, "users", user.uid), {
           Name: name,
