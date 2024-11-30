@@ -190,6 +190,8 @@ nav {
 
 .mobile-menu-icon i {
   color:#fff;
+ padding: 1px 5px;
+ margin-left: 90px;
 }
 
 /* Mobile Menu */
@@ -198,8 +200,8 @@ nav {
   background: rgb(0, 0, 0);
   z-index:-1;
   position: fixed;
-  top: 70px;
-  right: 400px;
+  top: 105px;
+  right: 350px;
   opacity: 1;
   padding: 0px 20px;
   text-align: left;
@@ -216,7 +218,7 @@ nav {
 .navbar-links-mobile a {
   font-family: serif;
   font-size: 18px;
-  color: #ebe2e2;
+  color: white;
   text-decoration: none;
   padding: 10px 40px;
   display: block;
@@ -226,7 +228,7 @@ nav {
 }
 
 .navbar-links-mobile a:hover {
-  color: #0ff;
+  color:#0ff;
   transform: scale(1.1);
 }
 
