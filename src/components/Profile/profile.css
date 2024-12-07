@@ -1,75 +1,154 @@
 /* Center the card on the page */
 .profile-page {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    font-family: 'Orbitron', sans-serif;
-  }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
   
-  /* Card styling */
+  font-family: 'Orbitron', sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+/* Card styling */
+.profile-card {
+  height: auto;
+  max-width: 400px;
+  width: 90%;
+  background: rgba(10, 10, 10, 0.8); /* Dark translucent background */
+  border-radius: 15px;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(15px);
+  box-shadow: 0 5px 30px rgba(0, 255, 255, 0.2); /* Neon glow */
+  padding: 25px 20px;
+  text-align: center;
+  color: #e5e5e5;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 50px rgba(0, 255, 255, 0.6);
+}
+
+/* Animated glow border */
+.profile-card::before {
+  content: '';
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  border-radius: 20px;
+  background: linear-gradient(45deg, #00f2fe, #4facfe, #00f2fe);
+  z-index: -1;
+  filter: blur(15px);
+  opacity: 0.8;
+}
+
+/* Profile image */
+.profile-image {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0 auto 15px;
+  border: 3px solid rgba(255, 255, 255, 0.4);
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.6); /* Neon glow for the image */
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.profile-image:hover {
+  transform: scale(1.1);
+  border-color: #00f2fe;
+}
+
+/* Welcome message */
+.welcome-message {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #ffffff;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  background: linear-gradient(90deg, #4facfe, #00f2fe);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Profile details */
+.profile-details p {
+  margin: 10px 0;
+  font-size: 16px;
+  color: #bfbfbf;
+  line-height: 1.6;
+}
+
+.profile-details span {
+  font-weight: bold;
+  color: #ffffff;
+}
+
+/* Logout button */
+.profile-logout-button {
+  margin-top: 20px;
+  padding: 12px 30px;
+  font-size: 16px;
+  background: linear-gradient(90deg, #00f2fe, #4facfe); /* Neon gradient */
+  color: #ffffff;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(0, 255, 255, 0.5);
+  transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-logout-button:hover {
+  background: linear-gradient(90deg, #00e6e6, #3bb3ff);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 25px rgba(0, 255, 255, 0.7);
+}
+
+/* Loading message */
+.loading-message {
+  font-size: 18px;
+  color: #8f8f8f;
+  text-shadow: 0 0 5px #00f2fe;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+      opacity: 0.7;
+  }
+  50% {
+      opacity: 1;
+  }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
   .profile-card {
-    height: 400px;
-    width: 350px;
-    background-color: rgba(50, 50, 50, 0.9); /* Dark translucent background */
-    border-radius: 10px;
-    backdrop-filter: blur(10px);
-    border: 2px solid rgba(255, 255, 255, 0.2);
-    box-shadow: 0 0 40px rgba(0, 0, 0, 0.8); /* Subtle dark shadow */
-    padding: 30px 35px;
-    text-align: center;
-    color: #f0f0f0; /* Light text color */
+      padding: 20px 15px;
   }
-  
-  /* Welcome message styling */
-  .welcome-message {
-    font-size: 22px;
-    margin-bottom: 20px;
-    color: #e0e0e0; /* Slightly lighter text */
-  }
-  
-  /* Profile details */
-  .profile-details p {
-    margin: 10px 0;
-    font-size: 16px;
-    color: #d3d3d3; /* Muted light text */
-  }
-  
-  .profile-details span {
-    font-weight: bold;
-    color: #ffffff; /* Bright white text for emphasis */
-  }
-  
-  /* Logout button */
-  .profile-logout-button {
-    margin-top: 20px;
-    padding: 10px 20px;
-    font-size: 16px;
-    background-color: #1e90ff; /* Vibrant blue button */
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-  }
-  
-  .profile-logout-button:hover {
-    background-color: #1c7ed6;
-    transform: scale(1.05); /* Slight scaling effect on hover */
-  }
-  
-  /* Loading message */
-  .loading-message {
-    font-size: 18px;
-    color: #bbbbbb; /* Neutral light gray */
-  }
-  
+
   .profile-image {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    cursor: pointer;
-    object-fit: cover;
-    border: 2px solid #ccc;
+      width: 120px;
+      height: 120px;
   }
-  
+
+  .welcome-message {
+      font-size: 20px;
+  }
+
+  .profile-details p {
+      font-size: 14px;
+  }
+
+  .profile-logout-button {
+      padding: 10px 20px;
+      font-size: 14px;
+  }
+}
