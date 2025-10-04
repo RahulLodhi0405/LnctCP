@@ -72,6 +72,7 @@ const ProblemHub = () => {
     await updateDoc(postRef, { replies: [...post.replies, newReply] });
     setReplyContents(prev => ({ ...prev, [postId]: "" }));
   };
+  
 
   const handleQuizAnswer = (qIndex, value) => {
     setQuizAnswers(prev => ({ ...prev, [qIndex]: value }));
