@@ -171,7 +171,7 @@ const Home = () => {
               <a href="https://github.com/RahulLodhi0405" target="_blank" rel="noopener noreferrer">
                 <FaGithub className="social-icon" /> 
               </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              <a href="https://instagram.com/_rahul.lodhi_" target="_blank" rel="noopener noreferrer">
+              <a href="https://instagram.com/rahullodhi.27" target="_blank" rel="noopener noreferrer">
                 <FaInstagram className="social-icon" />
               </a>
             </h3>
