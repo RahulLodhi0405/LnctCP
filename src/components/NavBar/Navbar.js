@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 import "../NavBar/Navbar.css";
-import collegeLogo from "../../Assets/CollegeLogo.png";
+import enigmalogo from "../../Assets/Logo.png";
 import "font-awesome/css/font-awesome.min.css";
 import { useAuth } from "../../Context/AuthContext"; // Import AuthContext for user state
 import DiamondHead from "../../Assets/DiamondHead.jpg";
@@ -16,7 +16,7 @@ const Navbar = () => {
       {/* Logo Section */}
       <div className="navbar-logo">
         <a href="https://www.lnct.ac.in" target="_blank" rel="noopener noreferrer">
-          <img src={collegeLogo} alt="College Logo" className="college-logo" />
+          <img src={enigmalogo} alt="Enigma Logo" className="enigma-logo" />
         </a>
       </div>
 

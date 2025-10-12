@@ -1,316 +1,170 @@
-:root{
-  --bg:#0b0c0f;
-  --card: rgba(255,255,255,0.03);
-  --glass: rgba(255,255,255,0.04);
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+:root {
+  --bg: #0b0c0f;
+  --card: rgba(255, 255, 255, 0.03);
+  --glass: rgba(255, 255, 255, 0.04);
   --accent: #39c0ff;
   --muted: #bfc8d2;
-  --soft-shadow: 0 8px 28px rgba(2,6,23,0.7);
+  --soft-shadow: 0 8px 28px rgba(2, 6, 23, 0.7);
   --radius: 12px;
 }
 
-*{box-sizing:border-box}
-body{margin:0;font-family:Inter, Roboto, "Segoe UI", sans-serif;background:var(--bg);color:#eef2f6}
-
-/* Wrapper & header */
-.ga-wrap{max-width:1150px;margin:24px auto;padding:18px;position:relative}
-.ga-header{text-align:center;margin-bottom:12px}
-.ga-title{font-size:1.85rem;margin:0;color:#fff}
-.ga-sub{margin:6px 0 0;color:var(--muted)}
-
-/* ---------------------------
-   HERO SLIDER
-   --------------------------- */
-.hero-slider{
-  width:100%;
-  margin:18px 0;
-  position:relative;
-  overflow:visible;
-  border-radius:12px;
-  outline:none;
+/* Reset */
+* {
+  box-sizing: border-box;
 }
-.hs-viewport{
-  width:100%;
-  overflow:hidden;
-  border-radius:12px;
-}
-.hs-track{
-  display:flex;
-  width:100%;
-  will-change:transform;
-}
-.hs-slide{
-  flex:0 0 100%;
-  position:relative;
-  user-select:none;
-}
-.hs-slide img{
-  width:100%;
-  height:100%;
-  object-fit:cover;
-  display:block;
-  border-radius:12px;
-}
-.hs-caption{
-  position:absolute;
-  left:18px;
-  bottom:18px;
-  background: linear-gradient(90deg, rgba(0,0,0,0.45), rgba(0,0,0,0.25));
-  padding:10px 14px;
-  border-radius:10px;
-  color:#fff;
-  backdrop-filter: blur(4px);
-}
-.hs-caption h3{margin:0;font-size:1.05rem}
-
-/* nav buttons */
-.hs-btn{
-  position:absolute;
-  top:50%;
-  transform:translateY(-50%);
-  background:linear-gradient(90deg, rgba(0,0,0,0.45), rgba(0,0,0,0.25));
-  border:none;
-  color:#fff;font-size:22px;padding:8px 12px;border-radius:8px;cursor:pointer;
-  backdrop-filter: blur(4px);
-  z-index:10;
-}
-.hs-prev{left:10px}
-.hs-next{right:10px}
-.hs-btn:hover{transform:translateY(-50%) scale(1.04)}
-
-/* dots */
-.hs-dots{
-  position:absolute;
-  left:50%;
-  transform:translateX(-50%);
-  bottom:8px;
-  display:flex;
-  gap:8px;
-  z-index:12;
-}
-.hs-dot{
-  width:10px; height:10px; border-radius:50%; background:rgba(255,255,255,0.16); border:none; cursor:pointer;
-}
-.hs-dot.active{background:var(--accent); box-shadow:0 6px 18px rgba(57,192,255,0.08)}
-
-/* ---------------------------
-   GALLERY GRID (same as before)
-   --------------------------- */
-.ga-grid{
-  display:grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap:18px;
-  margin-top:18px;
-  align-items:stretch;
+body {
+  margin: 0;
+  font-family: "Inter", Roboto, "Segoe UI", sans-serif;
+  background: var(--bg);
+  color: #eef2f6;
 }
 
-/* Card */
-.ga-card{
-  background: linear-gradient(180deg, rgba(255,255,255,0.02), transparent);
-  border-radius:var(--radius);
-  overflow:hidden;
-  display:flex;
-  flex-direction:column;
-  transition:transform .22s ease, box-shadow .22s ease;
-  border:1px solid rgba(255,255,255,0.03);
-  box-shadow: var(--soft-shadow);
-}
-.ga-card:focus-within, .ga-card:focus{outline:none; box-shadow: 0 12px 36px rgba(57,192,255,0.06); transform:translateY(-6px)}
-.ga-card:hover{transform:translateY(-8px)}
-
-.ga-media{height:160px; overflow:hidden; cursor:pointer}
-.ga-img{width:100%; height:100%; object-fit:cover; display:block; transition: transform .45s ease}
-.ga-media:hover .ga-img{transform:scale(1.06)}
-
-.ga-body{padding:12px 12px 14px; display:flex; flex-direction:column; gap:8px}
-.ga-headline{display:flex; align-items:flex-start; justify-content:space-between; gap:8px}
-.ga-title-card{font-size:1.05rem;margin:0;color:#fff}
-.fav{
-  border:none; background:transparent; color:var(--muted); font-size:1.05rem; cursor:pointer;
-  transition:transform .18s, color .18s;
-  padding:6px 8px;
-}
-.fav:hover{transform:scale(1.08)}
-.fav-on{color:#ff6b81; text-shadow:0 2px 8px rgba(255,107,129,0.12)}
-
-.ga-meta{color:var(--muted); font-size:0.88rem; display:flex; gap:8px; align-items:center}
-.ga-dot{opacity:0.6}
-.ga-desc{margin:0;color:#d6dde6;font-size:0.95rem;line-height:1.28;min-height:44px}
-
-.ga-actions{display:flex; gap:8px; margin-top:6px}
-.btn{
-  background:linear-gradient(90deg, rgba(57,192,255,0.12), rgba(57,192,255,0.06));
-  border:1px solid rgba(255,255,255,0.04);
-  color:var(--accent); padding:8px 12px; border-radius:8px; cursor:pointer; font-weight:700;
-  transition:transform .12s, box-shadow .12s;
-}
-.btn:hover{transform:translateY(-4px); box-shadow:0 10px 24px rgba(57,192,255,0.04)}
-.btn-ghost{background:transparent; color:var(--muted); border:1px solid rgba(255,255,255,0.03)}
-
-/* Lightbox overlay */
-.lb-overlay{
-  position:fixed; inset:0; display:flex; align-items:center; justify-content:center; z-index:9999;
-  background: linear-gradient(180deg, rgba(2,6,23,0.86), rgba(2,6,23,0.94));
-  padding:20px;
-  animation: lbFade .18s ease;
-}
-.lb-inner{position:relative; width:100%; max-width:1100px; display:flex; align-items:center; justify-content:center}
-.lb-close{
-  position:fixed; right:18px; top:18px; z-index:10010; background:transparent;border:none;color:#fff;font-size:28px;cursor:pointer;padding:6px;border-radius:8px;
-}
-.lb-close:hover{transform:scale(1.05)}
-
-/* nav */
-.lb-nav{
-  position:fixed; top:50%; transform:translateY(-50%); z-index:10010; background:transparent;border:none;color:#fff;font-size:28px;padding:12px;cursor:pointer;opacity:.92;
-}
-.lb-prev{left:8px}
-.lb-next{right:8px}
-.lb-nav:hover{transform:translateY(-50%) scale(1.06); opacity:1}
-
-/* lightbox body */
-.lb-body{
-  display:flex; gap:18px; align-items:flex-start; width:100%;
-  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
-  border-radius:10px; padding:12px; box-shadow:0 12px 50px rgba(0,0,0,0.6);
-  max-height:85vh; overflow:hidden;
-}
-.lb-image-wrap{flex:0 0 56%; display:flex; align-items:center; justify-content:center; overflow:hidden; position:relative}
-.lb-image{max-width:100%; max-height:78vh; object-fit:cover; border-radius:8px; transition:transform .18s ease; cursor:zoom-in; user-select:none}
-
-/* caption column */
-.lb-info{flex:1; padding:6px 10px; color:#e8eef6; overflow:auto}
-.lb-info h2{margin:0 0 6px; font-size:1.25rem}
-.lb-meta{color:var(--muted); font-size:0.95rem; margin-bottom:10px}
-.lb-desc{color:#d6dde6; line-height:1.4; margin-top:8px}
-
-/* controls inside lightbox */
-.lb-controls{display:flex; gap:8px; margin-top:12px}
-
-/* responsive */
-@media (max-width:880px){
-  .lb-body{flex-direction:column; align-items:center}
-  .lb-image-wrap{width:100%; flex-basis:auto}
-  .lb-image{width:100%; max-height:58vh}
-  .lb-inner{padding:8px}
-  .lb-prev, .lb-next{display:none}
-}
-
-/* small screens tweaks */
-@media (max-width:520px){
-  .ga-media{height:180px}
-  .ga-desc{min-height:56px}
-}
-
-/* animations */
-@keyframes lbFade{from{opacity:0; transform:translateY(6px)} to{opacity:1; transform:none}}
-
-/* Prevent page horizontal scroll from slider or cards */
-html, body {
+/* 🟦 Coming Soon Layout */
+.ga-coming-wrap {
+  min-height: calc(100vh - 80px); /* navbar offset */
   width: 100%;
-  overflow-x: hidden; /* prevents accidental horizontal scrollbar on desktop */
-}
-
-/* HERO SLIDER adjustments for desktop stability */
-.hero-slider {
-  width: 100%;
-  margin: 22px 0;
-  position: relative;
-  overflow: hidden; /* ensure no overflow on desktop, important */
-  border-radius: 12px;
-  outline: none;
-  min-height: 300px;
-  max-height: 520px; /* prevent giant images from overflowing on desktop */
-}
-
-/* ensure viewport keeps consistent height so track won't shift */
-.hs-viewport {
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  border-radius: 12px;
-  display: block;
-}
-
-/* track: use transform only (no width calculations) */
-.hs-track {
   display: flex;
-  height: 100%;
-  will-change: transform;
-}
-
-/* each slide should match viewport height exactly on desktop */
-.hs-slide {
-  flex: 0 0 100%;
-  height: 100%;
+  justify-content: center;
+  align-items: center;
+  padding-top: 80px; /* ensure no overlap with navbar */
+  overflow: hidden;
   position: relative;
-  user-select: none;
 }
 
-/* make slide images center-cover for consistent cropping on desktop */
-.hs-slide img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* ensures consistent cover on large screens */
-  display: block;
-  border-radius: 12px;
-  -webkit-backface-visibility: hidden; /* reduce rendering artifacts on desktop */
-  backface-visibility: hidden;
-  transform-origin: center center;
+.ga-coming-card {
+  background: var(--glass);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: var(--radius);
+  padding: 60px 80px;
+  text-align: center;
+  box-shadow: var(--soft-shadow);
+  backdrop-filter: blur(12px);
+  animation: fadeIn 1s ease-in-out;
+  position: relative;
 }
 
-/* caption: slightly larger on desktop and positioned inside bottom-left with safe padding */
-.hs-caption {
+/* glowing border pulse */
+.ga-coming-card::before {
+  content: "";
   position: absolute;
-  left: 18px;
-  bottom: 18px;
-  background: rgba(0, 0, 0, 0.38);
-  padding: 10px 14px;
-  border-radius: 10px;
-  color: #fff;
-  backdrop-filter: blur(3px);
+  inset: 0;
+  border-radius: var(--radius);
+  padding: 1px;
+  background: linear-gradient(135deg, rgba(57,192,255,0.4), rgba(255,255,255,0.05));
+  -webkit-mask: 
+    linear-gradient(#fff 0 0) content-box, 
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  animation: glowBorder 3s ease-in-out infinite;
 }
-.hs-caption h3 { margin: 0; font-size: 1.05rem; }
 
-/* bigger nav buttons on desktop for easier clicking */
-.hs-btn {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: rgba(0,0,0,0.45);
-  border: none;
+.ga-coming-title {
+  font-size: 3rem;
+  font-weight: 700;
+  margin: 0 0 12px;
   color: #fff;
-  font-size: 28px; /* a little bigger on desktop */
-  padding: 10px 14px;
-  border-radius: 8px;
-  cursor: pointer;
-  z-index: 12;
+  letter-spacing: 1px;
 }
-.hs-prev { left: 12px; }
-.hs-next { right: 12px; }
 
-/* make dots more visible on desktop */
-.hs-dots { bottom: 12px; }
-.hs-dot {
-  width: 12px; height: 12px;
-  background: rgba(255,255,255,0.16);
+.ga-coming-sub {
+  font-size: 1.4rem;
+  color: var(--muted);
+  margin-bottom: 40px;
+}
+
+/* Loader */
+.ga-loader {
+  width: 65px;
+  height: 65px;
+  border: 5px solid rgba(255, 255, 255, 0.1);
+  border-top: 5px solid var(--accent);
   border-radius: 50%;
-  border: none;
-}
-.hs-dot.active { background: var(--accent); box-shadow: 0 6px 18px rgba(57,192,255,0.08); }
-
-/* Desktop-specific: ensure the gallery grid does not overlap the hero area */
-.ga-wrap { padding-top: 8px; }
-
-/* Responsive desktop improvements: bigger lightbox and max-width */
-@media (min-width: 1100px) {
-  .hero-slider { height: 420px; min-height: 360px; max-height: 520px; }
-  .lb-body { max-width: 1100px; }
-  .lb-image { max-height: 82vh; }
-  .hs-caption { left: 28px; bottom: 28px; padding: 12px 16px; }
+  margin: 0 auto;
+  animation: spin 1.2s linear infinite;
+  box-shadow: 0 0 16px rgba(57, 192, 255, 0.25);
 }
 
-/* remove any accidental horizontal scroll from track content */
-.hs-track, .hs-viewport, .hs-slide { box-sizing: border-box; }
+/* Background Glow Orbs */
+.ga-coming-wrap::before,
+.ga-coming-wrap::after {
+  content: "";
+  position: absolute;
+  width: 420px;
+  height: 420px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(57,192,255,0.15), transparent 70%);
+  filter: blur(80px);
+  z-index: 0;
+  animation: float 10s infinite alternate ease-in-out;
+}
+.ga-coming-wrap::before {
+  top: -100px;
+  left: -100px;
+}
+.ga-coming-wrap::after {
+  bottom: -120px;
+  right: -120px;
+  animation-delay: 3s;
+}
 
-/* ensure the track transformation is crisp */
-.hs-track { transform: translate3d(0,0,0); -webkit-transform: translate3d(0,0,0); }
+/* Animations */
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes glowBorder {
+  0% {
+    opacity: 0.3;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.01);
+  }
+  100% {
+    opacity: 0.3;
+    transform: scale(1);
+  }
+}
+
+@keyframes float {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(40px, -40px);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .ga-coming-card {
+    padding: 40px 30px;
+  }
+  .ga-coming-title {
+    font-size: 2.2rem;
+  }
+  .ga-coming-sub {
+    font-size: 1.1rem;
+  }
+  .ga-loader {
+    width: 45px;
+    height: 45px;
+  }
+}
