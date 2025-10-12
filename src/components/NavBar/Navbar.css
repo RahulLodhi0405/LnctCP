@@ -19,7 +19,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 5px 10px;
+  padding: 5px 30px;
   background: linear-gradient(to right, #000 25%, #1b2251, #21035a);
   position:fixed;
   top: 0;

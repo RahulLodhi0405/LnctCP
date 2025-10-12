@@ -1,158 +1,380 @@
+*,
+*:before,
+*:after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  color: #ffffff;
+  overflow-x: hidden;
+}
+
+/* Profile Page */
 .profile-page {
   display: flex;
   justify-content: center;
-  padding: 40px;
+  align-items: center;
   min-height: 100vh;
-  font-family: 'Orbitron', sans-serif;
+  padding: 100px;
+  position: relative;
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.1), rgba(249, 115, 22, 0.1));
 }
 
+/* Glassmorphism Card */
 .profile-card.glass {
-  width: 380px;
-  background: rgba(255, 255, 255, 0.05);
-  border-radius: 20px;
-  padding: 25px;
+  width: 100%;
+  max-width: 450px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  padding: 2rem;
   text-align: center;
-  color: #fff;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  backdrop-filter: blur(15px);
-  box-shadow: 0 8px 32px rgba(0, 255, 255, 0.1);
   position: relative;
+  overflow: hidden;
+}
+
+/* Avatar */
+.avatar-area {
+  margin-bottom: 1.5rem;
 }
 
 .profile-image {
-  width: 140px;
-  height: 140px;
+  width: 120px;
+  height: 120px;
   border-radius: 50%;
-  border: 3px solid #00f2fe;
+  border: 3px solid #3b82f6;
+  object-fit: cover;
   cursor: pointer;
-  margin-bottom: 15px;
-  transition: transform 0.3s, box-shadow 0.3s;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .profile-image:hover {
   transform: scale(1.05);
-  box-shadow: 0 0 20px #00f2fe;
+  box-shadow: 0 0 20px rgba(59, 130, 246, 0.5);
 }
 
+.hidden-file {
+  display: none;
+}
+
+/* Profile Name and Welcome Message */
 .profile-name {
-  font-size: 24px;
-  font-weight: bold;
-  margin-bottom: 5px;
-  background: linear-gradient(90deg, #4facfe, #00f2fe);
+  font-size: 1.8rem;
+  font-weight: 600;
+  background: linear-gradient(90deg, #3b82f6, #f97316);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  margin-bottom: 0.5rem;
 }
 
 .welcome-msg {
-  margin-bottom: 20px;
-  font-size: 16px;
-  color: #bfbfbf;
+  font-size: 1rem;
+  color: #a0aec0;
+  margin-bottom: 1.5rem;
+}
+
+/* Contact Info and Edit Form */
+.contact-info {
+  margin: 1.5rem 0;
+  font-size: 0.95rem;
+  color: #e5e5e5;
 }
 
 .contact-info p {
-  margin: 8px 0;
-  font-size: 14px;
-  color: #ddd;
+  margin: 0.5rem 0;
 }
 
+.contact-info strong {
+  font-weight: 500;
+}
+
+.contact-info span {
+  color: #a0aec0;
+}
+
+/* Edit Form */
+.edit-form .input-group {
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+.edit-form label {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-bottom: 0.4rem;
+  color: #e5e5e5;
+}
+
+.edit-form input {
+  width: 100%;
+  padding: 0.75rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 6px;
+  color: #ffffff;
+  font-size: 0.95rem;
+  transition: border-color 0.3s ease;
+}
+
+.edit-form input:focus {
+  outline: none;
+  border-color: #f97316;
+}
+
+.edit-form input.error {
+  border-color: #ef4444;
+}
+
+.error-message {
+  color: #ef4444;
+  font-size: 0.8rem;
+  margin-top: 0.25rem;
+  display: block;
+}
+
+/* Profile Progress */
+.profile-progress {
+  margin: 1.5rem 0;
+  text-align: left;
+}
+
+.profile-progress span {
+  display: block;
+  font-size: 0.9rem;
+  color: #e5e5e5;
+  margin-bottom: 0.5rem;
+}
+
+.progress-bar-container {
+  width: 100%;
+  height: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.progress-bar {
+  height: 100%;
+  background: linear-gradient(90deg, #3b82f6, #f97316);
+  border-radius: 6px;
+  transition: width 0.5s ease;
+}
+
+/* Skills Section */
 .skills-section {
-  margin-top: 20px;
+  margin: 1.5rem 0;
   text-align: left;
 }
 
 .skills-section h3 {
-  margin-bottom: 10px;
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-bottom: 0.75rem;
+  color: #e5e5e5;
 }
 
 .skills-list {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
-  margin-bottom: 10px;
+  gap: 0.5rem;
 }
 
 .skill-badge {
-  background: rgba(0, 242, 254, 0.2);
-  padding: 5px 10px;
+  background: rgba(59, 130, 246, 0.2);
+  padding: 0.5rem 1rem;
   border-radius: 12px;
-  font-size: 12px;
-  display: flex;
+  font-size: 0.85rem;
+  display: inline-flex;
   align-items: center;
-  gap: 5px;
+  gap: 0.5rem;
+  transition: transform 0.2s ease;
+}
+
+.skill-badge:hover {
+  transform: translateY(-2px);
 }
 
 .skill-badge button {
   background: transparent;
   border: none;
-  color: #00f2fe;
+  color: #f97316;
+  font-size: 1rem;
   cursor: pointer;
+  line-height: 1;
+}
+
+.no-skills {
+  color: #a0aec0;
+  font-size: 0.9rem;
+  font-style: italic;
 }
 
 .skills-add {
   display: flex;
-  gap: 5px;
+  gap: 0.5rem;
+  margin-top: 1rem;
 }
 
 .skills-add input {
   flex: 1;
-  padding: 6px 10px;
-  border-radius: 12px;
-  border: none;
-  background: rgba(255, 255, 255, 0.1);
-  color: #fff;
+  padding: 0.75rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 6px;
+  color: #ffffff;
+  font-size: 0.95rem;
+}
+
+.skills-add input:focus {
+  outline: none;
+  border-color: #f97316;
 }
 
 .skills-add button {
-  padding: 6px 12px;
-  border-radius: 12px;
-  background: #00f2fe;
+  padding: 0.75rem 1.5rem;
+  background: linear-gradient(90deg, #3b82f6, #f97316);
   border: none;
-  color: #000;
+  border-radius: 6px;
+  color: #ffffff;
+  font-weight: 500;
   cursor: pointer;
+  transition: transform 0.2s ease;
 }
 
+.skills-add button:hover {
+  transform: translateY(-2px);
+}
+
+/* Action Bar */
 .action-bar {
-  margin-top: 20px;
   display: flex;
-  justify-content: space-between;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 0.75rem;
+  justify-content: center;
+  margin-top: 1.5rem;
 }
 
 .action-bar button {
-  padding: 8px 16px;
-  border-radius: 12px;
+  padding: 0.75rem 1.5rem;
+  background: linear-gradient(90deg, #3b82f6, #f97316);
   border: none;
+  border-radius: 6px;
+  color: #ffffff;
+  font-size: 0.95rem;
+  font-weight: 500;
   cursor: pointer;
-  background: linear-gradient(90deg, #00f2fe, #4facfe);
-  color: #000;
-  font-weight: bold;
+  transition: transform 0.2s ease, background 0.3s ease;
+}
+
+.action-bar button:hover {
+  transform: translateY(-2px);
+  background: linear-gradient(90deg, #2563eb, #ea580c);
 }
 
 .logout-btn {
-  background: #ff4d4d !important;
-  color: #fff !important;
+  background: linear-gradient(90deg, #ef4444, #b91c1c) !important;
 }
 
-.profile-progress {
-  margin: 15px 0;
-  height: 8px;
+.logout-btn:hover {
+  background: linear-gradient(90deg, #dc2626, #991b1b) !important;
+}
+
+/* Loading Spinner */
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid rgba(255, 255, 255, 0.2);
+  border-top: 4px solid #3b82f6;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+.loading-message {
+  font-size: 1rem;
+  color: #a0aec0;
+}
+
+/* Confetti Animation */
+.confetti-root {
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 12px;
-  position: relative;
-}
-
-.progress-bar {
   height: 100%;
-  background: #00f2fe;
-  border-radius: 12px;
-  transition: width 0.3s;
+  pointer-events: none;
+  z-index: 1000;
 }
 
-.progress-bar + span {
-  display: block;
-  margin-top: 5px;
-  font-size: 12px;
-  color: #bfbfbf;
+.confetti {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  opacity: 0.8;
+  animation: fall 2s ease-out forwards;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes fall {
+  0% {
+    transform: translateY(-100vh) rotate(0deg);
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateY(100vh) rotate(720deg);
+    opacity: 0;
+  }
+}
+
+/* Responsive Design */
+@media screen and (max-width: 480px) {
+  .profile-page {
+    padding: 1rem;
+  }
+
+  .profile-card.glass {
+    max-width: 100%;
+    padding: 1.5rem;
+  }
+
+  .profile-image {
+    width: 100px;
+    height: 100px;
+  }
+
+  .profile-name {
+    font-size: 1.5rem;
+  }
+
+  .welcome-msg {
+    font-size: 0.9rem;
+  }
+
+  .action-bar {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .action-bar button {
+    width: 100%;
+    padding: 0.7rem;
+  }
 }

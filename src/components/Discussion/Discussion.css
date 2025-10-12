@@ -1,6 +1,6 @@
 /* ---------- DISCUSSION PAGE WRAPPER (glassmorphism) ---------- */
 .discussion-page {
-  padding: 30px;
+  padding: 100px;
   font-family: 'Arial', sans-serif;
   /* subtle blurred background image */
   background: url('https://images.unsplash.com/photo-1612832020647-c9dfe0b2a3d3?auto=format&fit=crop&w=1470&q=80') no-repeat center center fixed;
